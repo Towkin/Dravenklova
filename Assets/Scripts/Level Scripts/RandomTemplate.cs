@@ -26,6 +26,7 @@ public class RandomTemplate : MonoBehaviour
         // Create a random Object form the list.
         EditorTestObject = InstantiateFromList();
         EditorTestObject.name = EditorTestObject.name + " - Delete me before play!";
+        EditorTestObject.transform.parent = this.transform;
     }
 
     
