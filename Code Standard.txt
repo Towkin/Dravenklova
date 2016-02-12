@@ -15,7 +15,7 @@ In Summary:
 						{
 							return PerlinNoise(new float[] { Location.X, Location.Y });
 						}
-	Parameters:			public void MoveEnemy(const GameObject aEnemy, const Vector3 aDirection, const float aDistance)
+	Parameters:			public void MoveEnemy(GameObject aEnemy, Vector3 aDirection, float aDistance)
 	
 	
 
@@ -47,7 +47,7 @@ Classes
 	}
 	
 Structs
-	Structs should be used when you have something with more base level behaviour rather than representative behaviour. For instance, while a Vector could (and in rare caases should) be a class, it's behaviour is to store a few values, do some maths and not much else, therefore it should be struct.
+	Structs should be used when you have something with more base level behaviour rather than representative behaviour. For instance, while a Vector could (and in rare caases should) be a class, its behaviour is to store a few values, do some maths and not much else, and therefore it should be struct.
 	
 	Examples:
 	public struct IntVector3
@@ -113,11 +113,10 @@ Functions
 Parameters/Arguments
 	Parameters are always in PascalCase with an a- prefix.
 	Exceptions from the rule: Math and Dimensions/Indices parameters.
-	Try to use const often!
 	
 	Examples:
-	public void MoveEnemy(const GameObject aEnemy, const Vector3 aDirection, const float aDistance)
-	public GameObject GetMapObject(const int x, const int y, const int z)
+	public void MoveEnemy(GameObject aEnemy, Vector3 aDirection, float aDistance)
+	public GameObject GetMapObject(int x, int y, int z)
 	
 
 	
