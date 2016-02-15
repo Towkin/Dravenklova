@@ -15,6 +15,10 @@ public class PlayerChar : MonoBehaviour {
     [SerializeField]private int m_PlayerAmmo;
     private int m_PlayerAmmoMax;
 
+    private float m_PlayerLanternCount;
+    private float m_PlayerLanternCountFin;
+    private float m_PlayerSanityDmg;
+
     public float PlayerHealth
     {
         get { return m_PlayerHealth; }
@@ -61,9 +65,12 @@ public class PlayerChar : MonoBehaviour {
         m_PlayerHealthMax = 4;
         m_PlayerOil = 8;
         m_PlayerOilMax = 8;
-        m_PlayerSanity = 8;
-        m_PlayerSanityMax = 8;
-	}
+        m_PlayerSanity = 100;
+        m_PlayerSanityMax = 100;
+        m_PlayerLanternCount = 0;
+        m_PlayerLanternCountFin = 1;
+        m_PlayerSanityDmg = 7;
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -73,6 +80,16 @@ public class PlayerChar : MonoBehaviour {
 
     void FixedUpdate ()
     {
+        m_PlayerLanternCount += m_PlayerLanternCountFin * Time.fixedDeltaTime;
+        if (m_PlayerLanternCount >= m_PlayerLanternCountFin)
+        {
+            PlayerSanity -= (m_PlayerSanityDmg - PlayerOil);
+            m_PlayerLanternCount = 0;
+        }
 
+        if (m_PlayerHealth <= 0)
+        {
+            //this does death
+        }
     }
 }

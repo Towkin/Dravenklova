@@ -271,10 +271,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d277fe36b01ed5345b71ebbc5414b8b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHealth: 0
-  PlayerSanity: 0
-  PlayerOil: 0
-  PlayerAmmo: 0
+  m_PlayerHealth: 0
+  m_PlayerSanity: 0
+  m_PlayerOil: 0
+  m_PlayerAmmo: 0
 --- !u!114 &851370714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,7 +374,7 @@ Transform:
   m_GameObject: {fileID: 1291090730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.5200605, y: 3.520061, z: 3.520061}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2

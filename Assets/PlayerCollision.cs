@@ -22,14 +22,17 @@ public class PlayerCollision : MonoBehaviour {
         if (Coll.gameObject.tag == "Food")
         {
             m_PlayerChar.PlayerHealth += 1f;
+            Destroy(Coll.gameObject);
         }
         if (Coll.gameObject.tag == "Oil")
         {
             m_PlayerChar.PlayerOil += 2f;
+            Destroy(Coll.gameObject);
         }
         if (Coll.gameObject.tag == "Bolt")
         {
             m_PlayerChar.PlayerAmmo += 1;
+            Destroy(Coll.gameObject);
         }
     }
 }
