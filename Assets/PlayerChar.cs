@@ -83,7 +83,7 @@ public class PlayerChar : MonoBehaviour {
         m_PlayerLanternCount += m_PlayerLanternCountFin * Time.fixedDeltaTime;
         if (m_PlayerLanternCount >= m_PlayerLanternCountFin)
         {
-            PlayerSanity -= (m_PlayerSanityDmg - PlayerOil);
+            PlayerSanity -= Mathf.Floor(m_PlayerSanityDmg - PlayerOil);
             m_PlayerLanternCount = 0;
         }
 
