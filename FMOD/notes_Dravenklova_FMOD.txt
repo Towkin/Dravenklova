@@ -1,0 +1,42 @@
+FMOD NOTES
+Dravenklova (2016 02 09 - 2016 02 18)
+Last update:	2016 02 16, kl 06.05
+By:			 	Pablo Sorribes Bernhard
+
+Nota Bene:
+A lot of sounds are still just placeholders, although the Ambience is almost entirely done.
+
+_CHARACTER:
+Footstep
+-	Walking = 0 (står stilla)
+	Walking = 1 (walks)
+-	Running = 0 (Doesn't run)
+	Running = 1 (Is running, "walking"-sounds get turned down)
+-	Will probably link "Fire" to this event the same way I've linked "Klinks" already.
+	
+Crossbow
+Sustain-points work as bools, access them via code in Unity. They stop playback until something triggers the cue.
+-	Starts with cue, player click → arrow shoot → check if Hit is either:
+	Wall 	= 0
+	Enemy 	= 1
+-	Next cue, waits for player_reload. 
+	Reload 	= 0 (reload failed due to releasing button → activates fail-sound and resets at the reload-sustain-point)
+	Reload 	= 1 (reload is under process/success. Goes back to beginning when complete)
+	
+Lamp
+-	[See "Footstep"]
+
+_ENEMIES
+-	Not designed yet, must consult you guys today.
+
+_ENVIRONMENT:	
+Ambience 
+-	Has almost all sounds. Will probably be that way when done too. 
+	Pop it in the game and see if it works :)
+
+Door_Metal_Opening_Sequence
+- 	Pretty self-explanatory, but yeah, it's for the intro-scene.
+
+Door_Portal
+-	For when entering a new room. 
+	Has 3 variations, with modulation on volume and pitch, to further enhance the variety of the event.

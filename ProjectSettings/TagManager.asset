@@ -4,9 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Pickup
+  - Food
   - Damage
   - REALPlayer
+  - Oil
+  - Bolt
+  - PrefabConnection
+  - PrefabBlocker
   layers:
   - Default
   - TransparentFX
