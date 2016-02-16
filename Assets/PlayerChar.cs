@@ -4,20 +4,21 @@ using System.Collections;
 public class PlayerChar : MonoBehaviour {
 
     [SerializeField]private float m_PlayerHealth;
-    private float m_PlayerHealthMax;
+    [SerializeField]private float m_PlayerHealthMax;
 
     [SerializeField]private float m_PlayerSanity;
-    private float m_PlayerSanityMax;
+    [SerializeField]private float m_PlayerSanityMax;
 
     [SerializeField]private float m_PlayerOil;
-    private float m_PlayerOilMax;
+    [SerializeField]private float m_PlayerOilMax;
 
     [SerializeField]private int m_PlayerAmmo;
-    private int m_PlayerAmmoMax;
+    [SerializeField]private int m_PlayerAmmoMax;
 
     private float m_PlayerLanternCount;
     private float m_PlayerLanternCountFin;
-    private float m_PlayerSanityDmg;
+    private float m_SecCount;
+    [SerializeField]private float m_PlayerSanityDmg;
 
     public float PlayerHealth
     {
@@ -45,6 +46,12 @@ public class PlayerChar : MonoBehaviour {
             m_PlayerSanity = Mathf.Clamp(value, 0f, m_PlayerSanityMax);
         }
     }
+
+    public float GetOilMax
+    {
+        get { return m_PlayerOilMax; }
+    }
+
     public float PlayerOil
     {
         get { return m_PlayerOil; }
@@ -63,13 +70,14 @@ public class PlayerChar : MonoBehaviour {
         m_PlayerAmmoMax = 3;
         m_PlayerHealth = 4;
         m_PlayerHealthMax = 4;
-        m_PlayerOil = 8;
-        m_PlayerOilMax = 8;
+        m_PlayerOilMax = 100;
+        m_PlayerOil = m_PlayerOilMax;
         m_PlayerSanity = 100;
         m_PlayerSanityMax = 100;
         m_PlayerLanternCount = 0;
-        m_PlayerLanternCountFin = 1;
-        m_PlayerSanityDmg = 7;
+        m_PlayerLanternCountFin = 2;
+        m_PlayerSanityDmg = 90;
+        m_SecCount = 1.0f * Time.fixedDeltaTime;
     }
 	
 	// Update is called once per frame
@@ -80,10 +88,10 @@ public class PlayerChar : MonoBehaviour {
 
     void FixedUpdate ()
     {
-        m_PlayerLanternCount += m_PlayerLanternCountFin * Time.fixedDeltaTime;
+        m_PlayerLanternCount += m_SecCount;
         if (m_PlayerLanternCount >= m_PlayerLanternCountFin)
         {
-            PlayerSanity -= Mathf.Floor(m_PlayerSanityDmg - PlayerOil);
+            PlayerSanity -= (Mathf.Floor(m_PlayerSanityDmg - PlayerOil)) / 15;
             m_PlayerLanternCount = 0;
         }
 

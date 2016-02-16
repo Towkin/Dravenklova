@@ -210,8 +210,8 @@ Light:
   serializedVersion: 6
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
-  m_Range: 10
+  m_Intensity: 2.58
+  m_Range: 2.5
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -244,6 +244,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b3851e59693d44687457ac4b171371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_OilDrainWalk: 0
+  m_OilDrainRun: 0
+  m_OilDrain: 0
   m_MyController: {fileID: 851370711}
 --- !u!1 &851370711 stripped
 GameObject:
@@ -272,9 +275,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlayerHealth: 0
+  m_PlayerHealthMax: 0
   m_PlayerSanity: 0
+  m_PlayerSanityMax: 0
   m_PlayerOil: 0
+  m_PlayerOilMax: 0
   m_PlayerAmmo: 0
+  m_PlayerAmmoMax: 0
+  m_PlayerSanityDmg: 0
 --- !u!114 &851370714
 MonoBehaviour:
   m_ObjectHideFlags: 0
