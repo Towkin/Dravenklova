@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="AudioFile" id="{2b06b064-5df8-4e76-ac1a-4446a437f5d1}">
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>7.3246258503401362</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/Lamp_Fire_Loop_01 {da4243a7-11ed-47c7-865a-e2f69b499682}.ogg</value>
+        </property>
+        <relationship name="container">
+            <destination>{286ade78-a370-45be-9784-b4c00db211f9}</destination>
+        </relationship>
+    </object>
+</objects>

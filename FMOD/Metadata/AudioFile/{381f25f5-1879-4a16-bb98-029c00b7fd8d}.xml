@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="AudioFile" id="{381f25f5-1879-4a16-bb98-029c00b7fd8d}">
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>3.2999999999999998</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/Water_Drops_10 {7136cd39-24e3-4d27-aceb-27c6f568a0d2}.ogg</value>
+        </property>
+        <relationship name="container">
+            <destination>{286ade78-a370-45be-9784-b4c00db211f9}</destination>
+        </relationship>
+    </object>
+</objects>

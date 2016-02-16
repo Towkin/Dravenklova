@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="AudioFile" id="{85965996-a00b-4236-8392-43d5049dfd2c}">
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.8651020408163266</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/Lamp_Fire_Fade In_01 {8751be56-dc02-44eb-975e-76ccd482d183}.ogg</value>
+        </property>
+        <relationship name="container">
+            <destination>{286ade78-a370-45be-9784-b4c00db211f9}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -321,9 +321,15 @@ Light:
   m_Enabled: 1
   serializedVersion: 6
   m_Type: 2
+<<<<<<< HEAD
   m_Color: {r: 0.9036287, g: 0.9558824, b: 0.41468427, a: 1}
   m_Intensity: 0
   m_Range: 8.96
+=======
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 2.58
+  m_Range: 2.5
+>>>>>>> 0f168e32bd8efb259f3c27b2fc317969116e97a2
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -356,6 +362,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b3851e59693d44687457ac4b171371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_OilDrainWalk: 0
+  m_OilDrainRun: 0
+  m_OilDrain: 0
   m_MyController: {fileID: 851370711}
 --- !u!1 &851370711 stripped
 GameObject:
@@ -384,9 +393,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PlayerHealth: 0
+  m_PlayerHealthMax: 0
   m_PlayerSanity: 0
+  m_PlayerSanityMax: 0
   m_PlayerOil: 0
+  m_PlayerOilMax: 0
   m_PlayerAmmo: 0
+  m_PlayerAmmoMax: 0
+  m_PlayerSanityDmg: 0
 --- !u!114 &851370714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,6 +429,7 @@ CapsuleCollider:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_PrefabInternal: {fileID: 1345851779}
+<<<<<<< HEAD
 --- !u!1001 &1020460125
 Prefab:
   m_ObjectHideFlags: 0
@@ -501,6 +516,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf495eacf58e31146ab012aa89ac68da, type: 2}
   m_IsPrefabParent: 0
+=======
+--- !u!114 &851370721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 851370711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205ce4b3b85931040897bf015cfb5f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoltPrefab: {fileID: 127590, guid: ed4a7e571d7d36f478f592395972a367, type: 2}
+  m_Loaded: 0
+  m_IsLoading: 0
+>>>>>>> 0f168e32bd8efb259f3c27b2fc317969116e97a2
 --- !u!1 &1291090730
 GameObject:
   m_ObjectHideFlags: 0
