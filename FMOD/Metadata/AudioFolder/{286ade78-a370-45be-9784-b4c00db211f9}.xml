@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="MasterAudioBinFolder" id="{286ade78-a370-45be-9784-b4c00db211f9}">
+        <property name="name">
+            <value>Master</value>
+        </property>
+    </object>
+</objects>

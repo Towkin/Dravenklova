@@ -8,6 +8,8 @@ TagManager:
   - Damage
   - Oil
   - Bolt
+  - PrefabConnection
+  - PrefabBlocker
   layers:
   - Default
   - TransparentFX
