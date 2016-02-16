@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  SourceProjectPath: 
-  SourceBankPath: 
+  SourceProjectPath: FMOD\Dravenklova_01.fspro
+  SourceBankPath: FMOD\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   SpeakerModeSettings:
@@ -27,7 +27,7 @@ MonoBehaviour:
   - Platform: 1
     Value: 1
   - Platform: 2
-    Value: 0
+    Value: 1
   OverlaySettings:
   - Platform: 1
     Value: 1
@@ -38,7 +38,11 @@ MonoBehaviour:
     Value: 1
   - Platform: 2
     Value: 0
-  BankDirectorySettings: []
+  BankDirectorySettings:
+  - Platform: 1
+    Value: Desktop
+  - Platform: 2
+    Value: Desktop
   VirtualChannelSettings:
   - Platform: 1
     Value: 1024
@@ -50,5 +54,5 @@ MonoBehaviour:
   - Platform: 2
     Value: 32
   Plugins: []
-  MasterBank: 
+  MasterBank: Master Bank
   Banks: []
