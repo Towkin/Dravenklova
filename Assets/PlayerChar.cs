@@ -66,7 +66,7 @@ public class PlayerChar : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        m_PlayerAmmo = 0;
+        m_PlayerAmmo = 3;
         m_PlayerAmmoMax = 3;
         m_PlayerHealth = 4;
         m_PlayerHealthMax = 4;

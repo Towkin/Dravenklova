@@ -311,6 +311,20 @@ CapsuleCollider:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_PrefabInternal: {fileID: 1345851779}
+--- !u!114 &851370721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 851370711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 205ce4b3b85931040897bf015cfb5f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoltPrefab: {fileID: 127590, guid: ed4a7e571d7d36f478f592395972a367, type: 2}
+  m_Loaded: 0
+  m_IsLoading: 0
 --- !u!1 &1291090730
 GameObject:
   m_ObjectHideFlags: 0
