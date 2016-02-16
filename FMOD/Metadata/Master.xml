@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="MixerMaster" id="{e30d5cd9-cb7b-4d1e-a625-b488e7350bf6}">
+        <property name="name">
+            <value>Master Bus</value>
+        </property>
+        <relationship name="effectChain">
+            <destination>{4c4bc223-b476-431d-bf9e-8c245fb031e8}</destination>
+        </relationship>
+        <relationship name="panner">
+            <destination>{41e921b4-ffd2-4ad4-a6f1-964bd4db0b9e}</destination>
+        </relationship>
+        <relationship name="mixer">
+            <destination>{6face747-57b3-48df-ad5e-d72e58b75d07}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusEffectChain" id="{4c4bc223-b476-431d-bf9e-8c245fb031e8}">
+        <relationship name="effects">
+            <destination>{8f883aa1-c6da-4fab-9e7e-f4d65e6ea62e}</destination>
+            <destination>{4f808b0c-1e6f-487e-a9c6-e09250c5be25}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusPanner" id="{41e921b4-ffd2-4ad4-a6f1-964bd4db0b9e}"/>
+    <object class="LimiterEffect" id="{8f883aa1-c6da-4fab-9e7e-f4d65e6ea62e}">
+        <property name="ceiling">
+            <value>-0.100000001</value>
+        </property>
+    </object>
+    <object class="MixerBusFader" id="{4f808b0c-1e6f-487e-a9c6-e09250c5be25}"/>
+</objects>
