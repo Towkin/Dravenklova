@@ -15,9 +15,9 @@ public class PlayerChar : MonoBehaviour {
     [SerializeField]private int m_PlayerAmmo;
     [SerializeField]private int m_PlayerAmmoMax;
 
+    private float m_PlayerHolyMod;
     private float m_PlayerLanternCount;
     private float m_PlayerLanternCountFin;
-    private float m_SecCount;
     [SerializeField]private float m_PlayerSanityDmg;
 
     public float PlayerHealth
@@ -66,18 +66,18 @@ public class PlayerChar : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        m_PlayerAmmo = 3;
+        m_PlayerHolyMod = 15;
         m_PlayerAmmoMax = 3;
+        m_PlayerAmmo = 3;
         m_PlayerHealth = 4;
         m_PlayerHealthMax = 4;
         m_PlayerOilMax = 100;
         m_PlayerOil = m_PlayerOilMax;
-        m_PlayerSanity = 100;
         m_PlayerSanityMax = 100;
+        m_PlayerSanity = 100;
         m_PlayerLanternCount = 0;
         m_PlayerLanternCountFin = 2;
         m_PlayerSanityDmg = 90;
-        m_SecCount = 1.0f * Time.fixedDeltaTime;
     }
 	
 	// Update is called once per frame
@@ -88,10 +88,10 @@ public class PlayerChar : MonoBehaviour {
 
     void FixedUpdate ()
     {
-        m_PlayerLanternCount += m_SecCount;
+        m_PlayerLanternCount += Time.fixedDeltaTime;
         if (m_PlayerLanternCount >= m_PlayerLanternCountFin)
         {
-            PlayerSanity -= (Mathf.Floor(m_PlayerSanityDmg - PlayerOil)) / 15;
+            PlayerSanity -= (Mathf.Floor(m_PlayerSanityDmg - PlayerOil)) / m_PlayerHolyMod;
             m_PlayerLanternCount = 0;
         }
 
