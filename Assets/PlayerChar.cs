@@ -14,6 +14,7 @@ public class PlayerChar : MonoBehaviour {
 
     [SerializeField]private int m_PlayerAmmo;
     [SerializeField]private int m_PlayerAmmoMax;
+    [SerializeField]private float m_PlayerDamage;
 
     private float m_PlayerHolyMod;
     private float m_PlayerLanternCount;
@@ -58,6 +59,15 @@ public class PlayerChar : MonoBehaviour {
         set
         {
             m_PlayerOil = Mathf.Clamp(value, 0f, m_PlayerOilMax);
+        }
+    }
+
+    public float PlayerDamage
+    {
+        get { return m_PlayerDamage; }
+        set
+        {
+            m_PlayerDamage = value;
         }
     }
 
