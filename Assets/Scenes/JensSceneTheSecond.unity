@@ -124,9 +124,50 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8178806, guid: 455ea43f1b036d14ba9ff4c1ae8814f3, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 455ea43f1b036d14ba9ff4c1ae8814f3, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &216878652 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 195192, guid: 455ea43f1b036d14ba9ff4c1ae8814f3, type: 2}
+  m_PrefabInternal: {fileID: 216878651}
+--- !u!1 &216878653 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 191676, guid: 455ea43f1b036d14ba9ff4c1ae8814f3, type: 2}
+  m_PrefabInternal: {fileID: 216878651}
+--- !u!114 &216878654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 216878652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Environment/Ambience
+  PlayEvent: 1
+  StopEvent: 2
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Params: []
+--- !u!114 &216878655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 216878653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &678906390
 GameObject:
   m_ObjectHideFlags: 0
