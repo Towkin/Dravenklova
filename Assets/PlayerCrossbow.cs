@@ -17,7 +17,7 @@ public class PlayerCrossbow : MonoBehaviour {
 	void Start ()
     {
         m_PlayerChar = GetComponent<PlayerChar>();
-        m_Loaded = false;
+        m_Loaded = true;
         m_IsLoading = false;
         
     }
@@ -28,9 +28,10 @@ public class PlayerCrossbow : MonoBehaviour {
             if (m_Loaded)
             {
                 Camera m_Cam = Camera.main;
-                GameObject BoltShot = (GameObject)Instantiate(BoltPrefab, m_Cam.transform.position, m_Cam.transform.rotation);
+                GameObject BoltShot = (GameObject)Instantiate(BoltPrefab, m_Cam.transform.position + m_Cam.transform.forward * 1f, m_Cam.transform.rotation);
                 Rigidbody BoltBody = BoltShot.GetComponent<Rigidbody>();
                 BoltBody.AddForce(m_Cam.transform.forward * m_BoltImpulse, ForceMode.Impulse);
+                BoltShot.transform.up = m_Cam.transform.forward;
                 m_Loaded = false;
             }
             else if (m_PlayerChar.PlayerAmmo > 0)
