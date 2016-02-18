@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="AudioFile" id="{ec8edc06-9269-43f0-9d85-854e2bc5cbad}">
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>3.75</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/Char_Insanity_04 {ba8ad4ad-3a08-4bb4-b35b-fbf0fe0608a1}.ogg</value>
+        </property>
+        <relationship name="container">
+            <destination>{286ade78-a370-45be-9784-b4c00db211f9}</destination>
+        </relationship>
+    </object>
+</objects>

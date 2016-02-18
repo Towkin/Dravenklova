@@ -17,7 +17,7 @@ public class PlayerCollision : MonoBehaviour {
 	
 	}
 
-    void OnCollisionEnter (Collision Coll)
+    void OnTriggerEnter (Collider Coll)
     {
         if (Coll.gameObject.tag == "Food")
         {
