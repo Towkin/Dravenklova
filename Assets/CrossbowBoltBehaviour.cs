@@ -37,9 +37,14 @@ public class CrossbowBoltBehaviour : MonoBehaviour {
                 }
                 else
                 {
+                    float m_Rnd = Random.Range(1, 5);
+                    if (m_Rnd > 3)
+                        Destroy(this.gameObject);
+                    Debug.Log(m_Rnd);
+
                     transform.position = m_Hit.point;
                     Destroy(m_BoltBody);
-                    //this.gameObject.tag = "Bolt";
+                    
                 }
                 
             }
@@ -52,14 +57,4 @@ public class CrossbowBoltBehaviour : MonoBehaviour {
             }
         }
 	}
-
-    /*void OnCollisionEnter (Collision m_Coll)
-    {
-        m_IsFlying = false;
-
-        if ( m_Coll.gameObject.tag == "Enemy" )
-        {
-            
-        }
-    }*/
 }

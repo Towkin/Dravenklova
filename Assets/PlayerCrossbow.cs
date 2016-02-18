@@ -46,7 +46,8 @@ public class PlayerCrossbow : MonoBehaviour {
             }
             
         }
-        if (m_IsLoading)
+
+        if (Input.GetButton("Attack") && m_IsLoading)
         {
             m_PlayerReloadCount += Time.deltaTime;
 
@@ -57,6 +58,12 @@ public class PlayerCrossbow : MonoBehaviour {
                 m_PlayerReloadCount = 0;
                 m_PlayerChar.PlayerAmmo -= 1;
             }
+        }
+
+        if (Input.GetButtonUp("Attack"))
+        {
+            m_PlayerReloadCount = 0;
+            m_IsLoading = false;
         }
     }
 }

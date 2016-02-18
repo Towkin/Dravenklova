@@ -47,18 +47,9 @@ public class LanternLight : MonoBehaviour {
         m_Controller = MyController.GetComponent<FirstPersonController>();
         m_Light = GetComponent<Light>();
         m_PlayerChar = MyController.GetComponent<PlayerChar>();
-        //m_DecreaseDrainHalf = .8f;
-        //m_DecreaseDrainQuart = .6f;
 
-        //m_RangeMax = 8;
-        //m_RangeMin = 3;
-
-        //m_IntensityMax = 2.5f;
-        //m_IntensityMin = .7f;
-
-        //m_OilDrain = .5f;
         m_OilDrainWalk = m_OilDrain * Time.fixedDeltaTime;
-        m_OilDrainRun = ((m_OilDrain * 1.5f) * Time.fixedDeltaTime);
+        m_OilDrainRun = ((m_OilDrain * 2.5f) * Time.fixedDeltaTime);
 	}
 	
 	// Update is called once per frame
