@@ -222,7 +222,7 @@ GameObject:
   - 23: {fileID: 2394502}
   m_Layer: 0
   m_Name: RoomPlace (1)
-  m_TagString: Untagged
+  m_TagString: PrefabBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,7 +299,7 @@ GameObject:
   - 114: {fileID: 11473640}
   m_Layer: 0
   m_Name: ConnectionPoint1
-  m_TagString: Untagged
+  m_TagString: PrefabConnection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -317,7 +317,7 @@ GameObject:
   - 23: {fileID: 2314860}
   m_Layer: 0
   m_Name: RoomPlace (3)
-  m_TagString: Untagged
+  m_TagString: PrefabBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -505,7 +505,7 @@ GameObject:
   - 23: {fileID: 2375488}
   m_Layer: 0
   m_Name: RoomPlace (2)
-  m_TagString: Untagged
+  m_TagString: PrefabBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

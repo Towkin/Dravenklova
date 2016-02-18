@@ -48,10 +48,10 @@ GameObject:
   - 33: {fileID: 3397360}
   - 65: {fileID: 6559322}
   - 23: {fileID: 2372370}
-  - 114: {fileID: 11471922}
+  - 114: {fileID: 11450896}
   m_Layer: 0
   m_Name: ConnectionPoint1
-  m_TagString: Untagged
+  m_TagString: PrefabConnection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,7 +246,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11471922
+--- !u!114 &11450896
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
