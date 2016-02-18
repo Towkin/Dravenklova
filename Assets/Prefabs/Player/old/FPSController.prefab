@@ -488,6 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoltPrefab: {fileID: 114608, guid: ed4a7e571d7d36f478f592395972a367, type: 2}
+  Crossbow: {fileID: 0}
   m_Loaded: 0
   m_IsLoading: 0
 --- !u!136 &13603880
