@@ -26,7 +26,7 @@ public class PlayerCollision : MonoBehaviour {
         }
         if (Coll.gameObject.tag == "Oil")
         {
-            m_PlayerChar.PlayerOil += 2f;
+            m_PlayerChar.PlayerOil += 20f;
             Destroy(Coll.gameObject);
         }
         if (Coll.gameObject.tag == "Bolt")

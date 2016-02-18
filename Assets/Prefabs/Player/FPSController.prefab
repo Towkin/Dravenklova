@@ -393,10 +393,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IsWalking: 0
-  m_WalkSpeed: 5
-  m_RunSpeed: 10
+  m_WalkSpeed: 4
+  m_RunSpeed: 8
   m_RunstepLenghten: 0.7
-  m_JumpSpeed: 10
+  m_JumpSpeed: 8
   m_StickToGroundForce: 10
   m_GravityMultiplier: 2
   m_MouseLook:
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 205ce4b3b85931040897bf015cfb5f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoltPrefab: {fileID: 127590, guid: ed4a7e571d7d36f478f592395972a367, type: 2}
+  BoltPrefab: {fileID: 114608, guid: ed4a7e571d7d36f478f592395972a367, type: 2}
   m_Loaded: 0
   m_IsLoading: 0
 --- !u!136 &13603880
@@ -560,6 +560,22 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_WalkSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_RunSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_JumpSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: BoltPrefab
+      value: 
+      objectReference: {fileID: 114608, guid: ed4a7e571d7d36f478f592395972a367, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 195192}

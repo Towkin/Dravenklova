@@ -52,7 +52,7 @@ public class LanternLight : MonoBehaviour {
 
         m_OilDrain = .5f;
         m_OilDrainWalk = m_OilDrain * Time.fixedDeltaTime;
-        m_OilDrainRun = ((m_OilDrain * 1.5f) * Time.fixedDeltaTime);
+        m_OilDrainRun = ((m_OilDrain * 2.5f) * Time.fixedDeltaTime);
 	}
 	
 	// Update is called once per frame
