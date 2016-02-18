@@ -184,7 +184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreBlockerTests: 0
-  m_DebugLogs: 0
+  m_SpawnBlockerTests: 0
+  m_DebugLogs: 1
   m_Cube: {fileID: 2094070319}
   m_FirstRoomPrefab: {fileID: 936021088}
   m_PrefabArray:
@@ -196,7 +197,7 @@ MonoBehaviour:
   - {fileID: 153796, guid: ffe011994c6b1464887141a8fe53868c, type: 2}
   - {fileID: 180570, guid: 733613142896c07499fa0a168062b7f2, type: 2}
   - {fileID: 180368, guid: 028421fee76cd3b48aef420a406accb1, type: 2}
-  - {fileID: 180368, guid: 028421fee76cd3b48aef420a406accb1, type: 2}
+  - {fileID: 182672, guid: 5a2c58e3a8376ad4b88f312d15739abf, type: 2}
 --- !u!4 &647369884
 Transform:
   m_ObjectHideFlags: 0
@@ -206,10 +207,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2094070323}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1001 &811526484
 Prefab:
   m_ObjectHideFlags: 0
@@ -362,7 +362,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 490984, guid: e3b7eb93d758e5745b98606b65811db9, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3b7eb93d758e5745b98606b65811db9, type: 2}
@@ -440,5 +440,5 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 647369884}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4

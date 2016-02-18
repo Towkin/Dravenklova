@@ -11,6 +11,7 @@ TagManager:
   - Bolt
   - PrefabConnection
   - PrefabBlocker
+  - Ghoul
   layers:
   - Default
   - TransparentFX
