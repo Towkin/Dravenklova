@@ -35,3 +35,4 @@ sysinfo.txt
 # FMOD Generated Files
 /Assets/FMODStudioCache.asset
 fmod_editor.log
+fmod.log
