@@ -80,7 +80,7 @@ public class LevelDigger : MonoBehaviour {
         for (int i = 0; i < aPrefabs.Length; i++)
         {
             GameObject TestObject = aPrefabs[(i + RandomAdd) % aPrefabs.Length];
-            BoxCollider[] TestColliders = TestObject.GetComponentsInChildren<BoxCollider>();
+            BoxCollider[] TestBlockers = TestObject.GetComponentsInChildren<BoxCollider>();
 
 
             ConnectionPoint[] TestConnections = GetConnections(TestObject);
@@ -88,15 +88,24 @@ public class LevelDigger : MonoBehaviour {
             foreach(ConnectionPoint Connection in TestConnections)
             {
                 bool NoCollisions = true;
-                foreach (BoxCollider TestCollider in TestColliders)
+                Vector3 ConnectionOffset = Connection.transform.position;
+                Quaternion ConnectionRotation = Connection.transform.rotation;
+
+                foreach (BoxCollider TestBlocker in TestBlockers)
                 {
-                    Bounds TestBounds = TestCollider.bounds;
-                    
+                    if (TestBlocker.tag != "PrefabBlocker")
+                    {
+                        continue;
+                    }
+
+                    Transform TestTransform = TestBlocker.transform;
+                    TestTransform.position += aFromTransform.position - ConnectionOffset;
+                    TestTransform.Rotate(ConnectionRotation.eulerAngles);
 
                     foreach (GameObject OtherBlockers in ExistingPrefabBlockers)
                     {
                         BoxCollider OtherCollider = OtherBlockers.GetComponent<BoxCollider>();
-                        if (TestCollider.bounds.Intersects(OtherCollider.bounds))
+                        if (OtherCollider != null && BoundingBoxCollision.TestCollision(TestTransform, TestBlocker.size, OtherCollider.transform, OtherCollider.size))
                         {
                             NoCollisions = false;
                             break;
@@ -110,6 +119,8 @@ public class LevelDigger : MonoBehaviour {
                 if(NoCollisions)
                 {
                     // Build the thing from this place, then break.
+                    ReturnPrefab = Instantiate(TestObject);
+
                     break;
                 }
             }
