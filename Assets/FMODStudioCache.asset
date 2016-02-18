@@ -23,7 +23,7 @@ MonoBehaviour:
   - {fileID: 11447250}
   - {fileID: 11489630}
   MasterBankRef: {fileID: 11414656}
-  stringsBankWriteTime: 635912358363941511
+  stringsBankWriteTime: 635912371716093604
 --- !u!114 &11405568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,6 +45,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &11406450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Reload
+  Min: 0
+  Max: 1
+--- !u!114 &11407418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Running
+  Min: 0
+  Max: 1
 --- !u!114 &11407942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,11 +243,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD\Build\Desktop\Master Bank.bank
-  lastModified: 635912358363931510
+  lastModified: 635912371716093604
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 4097920
+    Value: 4098368
   Exists: 1
 --- !u!114 &11416456
 MonoBehaviour:
@@ -275,6 +303,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 57616c6b696e67
+  Min: 0
+  Max: 1
+--- !u!114 &11422568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Reload
   Min: 0
   Max: 1
 --- !u!114 &11422810
@@ -342,8 +384,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &11431040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,6 +467,20 @@ MonoBehaviour:
   - Name: 4465736b746f70
     Value: 0
   Exists: 1
+--- !u!114 &11437138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Walking
+  Min: 0
+  Max: 1
 --- !u!114 &11438904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +504,20 @@ MonoBehaviour:
   - {fileID: 11448824}
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &11441270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Hit_Wall_Enemy
+  Min: 0
+  Max: 1
 --- !u!114 &11445180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,10 +551,24 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 11434058}
-  - {fileID: 11468710}
+  - {fileID: 11441270}
+  - {fileID: 11422568}
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &11448620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Hit_Wall_Enemy
+  Min: 0
+  Max: 1
 --- !u!114 &11448824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,6 +682,20 @@ MonoBehaviour:
   - Name: 4465736b746f70
     Value: 0
   Exists: 1
+--- !u!114 &11453990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Running
+  Min: 0
+  Max: 1
 --- !u!114 &11454916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,6 +764,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 52756e6e696e67
+  Min: 0
+  Max: 1
+--- !u!114 &11460788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Hit_Wall_Enemy
+  Min: 0
+  Max: 1
+--- !u!114 &11461484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Walking
   Min: 0
   Max: 1
 --- !u!114 &11461570
@@ -840,6 +966,20 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &11480362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Running
+  Min: 0
+  Max: 1
 --- !u!114 &11482154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -852,6 +992,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Running
+  Min: 0
+  Max: 1
+--- !u!114 &11482468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Walking
   Min: 0
   Max: 1
 --- !u!114 &11485586
@@ -1078,7 +1232,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 11474946}
-  - {fileID: 11482154}
+  - {fileID: 11482468}
+  - {fileID: 11480362}
   MinDistance: 1
   MaxDistance: 20

@@ -452,7 +452,7 @@
     </object>
     <object class="EventMixerGroup" id="{104cbc6c-6846-4cc8-899e-1e99741f8c2c}">
         <property name="volume">
-            <value>-13</value>
+            <value>-17</value>
         </property>
         <property name="name">
             <value>CoverThaLoop</value>
@@ -1330,6 +1330,7 @@
     <object class="MixerBusEffectChain" id="{726fbd75-ef0f-47cf-8b11-1ae8651f4fbc}">
         <relationship name="effects">
             <destination>{1123972a-8b75-48df-81d1-b51d13d3872a}</destination>
+            <destination>{f60f645f-56cf-4007-92a2-1e4cc8f1aa55}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{5e1cf234-8243-408d-85a7-b07842c5c2c6}"/>
@@ -1794,6 +1795,35 @@
         </relationship>
     </object>
     <object class="MixerBusFader" id="{1123972a-8b75-48df-81d1-b51d13d3872a}"/>
+    <object class="SFXReverbEffect" id="{f60f645f-56cf-4007-92a2-1e4cc8f1aa55}">
+        <property name="decayTime">
+            <value>2800</value>
+        </property>
+        <property name="earlyDelay">
+            <value>5.5</value>
+        </property>
+        <property name="HFReference">
+            <value>11000</value>
+        </property>
+        <property name="lowShelfFrequency">
+            <value>44</value>
+        </property>
+        <property name="lowShelfGain">
+            <value>-7.5</value>
+        </property>
+        <property name="highCut">
+            <value>1200</value>
+        </property>
+        <property name="earlyLateMix">
+            <value>63</value>
+        </property>
+        <property name="wetLevel">
+            <value>4</value>
+        </property>
+        <property name="dryLevel">
+            <value>-10</value>
+        </property>
+    </object>
     <object class="LimiterEffect" id="{7fbd7dcc-75c1-4fd5-86f3-c6b0658b1096}">
         <property name="ceiling">
             <value>-0.100000001</value>
