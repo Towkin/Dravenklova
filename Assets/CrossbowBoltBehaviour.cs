@@ -39,6 +39,7 @@ public class CrossbowBoltBehaviour : MonoBehaviour {
                 {
                     transform.position = m_Hit.point;
                     Destroy(m_BoltBody);
+                    //this.gameObject.tag = "Bolt";
                 }
                 
             }
