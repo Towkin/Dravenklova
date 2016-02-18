@@ -14,35 +14,105 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 11414656}
   EditorEvents:
-  - {fileID: 11413034}
-  - {fileID: 11451988}
-  - {fileID: 11449088}
-  - {fileID: 11497958}
-  - {fileID: 11430478}
-  - {fileID: 11432594}
-  - {fileID: 11447250}
-  - {fileID: 11489630}
-  - {fileID: 11474446}
-  - {fileID: 11426278}
-  - {fileID: 11428182}
-  - {fileID: 11462884}
-  - {fileID: 11430070}
-  - {fileID: 11466648}
-  - {fileID: 11405298}
-  - {fileID: 11482826}
-  - {fileID: 11482708}
-  - {fileID: 11466608}
-  - {fileID: 11488508}
-  - {fileID: 11436896}
-  - {fileID: 11459044}
-  - {fileID: 11416260}
-  - {fileID: 11416530}
-  - {fileID: 11431790}
-  - {fileID: 11453842}
-  - {fileID: 11421896}
-  - {fileID: 11468248}
+  - {fileID: 11474088}
+  - {fileID: 11491372}
+  - {fileID: 11475964}
+  - {fileID: 11470358}
+  - {fileID: 11435726}
+  - {fileID: 11421740}
+  - {fileID: 11497548}
+  - {fileID: 11478302}
+  - {fileID: 11429582}
+  - {fileID: 11475056}
+  - {fileID: 11403776}
+  - {fileID: 11462804}
+  - {fileID: 11497096}
+  - {fileID: 11482000}
+  - {fileID: 11469028}
+  - {fileID: 11492200}
+  - {fileID: 11465188}
+  - {fileID: 11424298}
+  - {fileID: 11447836}
+  - {fileID: 11427554}
+  - {fileID: 11492536}
+  - {fileID: 11408668}
+  - {fileID: 11439746}
+  - {fileID: 11404156}
+  - {fileID: 11483380}
+  - {fileID: 11485738}
+  - {fileID: 11404890}
   MasterBankRef: {fileID: 11414656}
-  stringsBankWriteTime: 635914078611438722
+  stringsBankWriteTime: 635914086361236776
+--- !u!114 &11400486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 20
+--- !u!114 &11403776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Lamp/Fire
+  guid: 7aa8106a32b33042afbffa1325bfc590
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &11404086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Walking
+  Min: 0
+  Max: 1
+--- !u!114 &11404156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: snapshot:/Dungeon
+  guid: 0acc97b0b9559c439aa5d71013368a72
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &11404648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,7 +127,7 @@ MonoBehaviour:
   Name: Reload
   Min: 0
   Max: 1
---- !u!114 &11405298
+--- !u!114 &11404890
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -68,16 +138,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Character/Breath/Breath_Calm
-  guid: 497604842eb826478b3d40dad36e104e
+  Path: snapshot:/Shrine
+  guid: c4f0ab02342ddb48a0621b31b82121f8
   Banks:
   - {fileID: 11414656}
   IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
+  Is3D: 0
+  IsOneShot: 1
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0
+  MaxDistance: 0
 --- !u!114 &11405568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +283,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
---- !u!114 &11408510
+--- !u!114 &11408120
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -224,9 +294,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Distance
+  Name: Dungeon_Shrine
   Min: 0
-  Max: 20
+  Max: 1
+--- !u!114 &11408668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Door_Metal_Opening_Sequence
+  guid: edb9cc69331f124ebb6fe9bd112041ae
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &11408888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,20 +330,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 52756e6e696e67
-  Min: 0
-  Max: 1
---- !u!114 &11408996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Dungeon_Shrine
   Min: 0
   Max: 1
 --- !u!114 &11409062
@@ -297,34 +374,6 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
---- !u!114 &11412040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Reload
-  Min: 0
-  Max: 1
---- !u!114 &11412294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Reload
-  Min: 0
-  Max: 1
 --- !u!114 &11412646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,8 +410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Environment/Water
   guid: 0627f8b3b5cc01409bd588ac4f9eecac
-  Banks:
-  - {fileID: 11414656}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -381,34 +429,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD\Build\Desktop\Master Bank.bank
-  lastModified: 635914078611428697
+  lastModified: 635914086361226776
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 6807040
   Exists: 1
---- !u!114 &11416260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Character/Crossbow/Arrow_Hit
-  guid: aeea156b216ca8428511c5a82667c504
-  Banks:
-  - {fileID: 11414656}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 11457060}
-  MinDistance: 1
-  MaxDistance: 20
 --- !u!114 &11416456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,27 +453,6 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
---- !u!114 &11416530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Enemies/Enemy_Breath_Idle
-  guid: f1e9dfcbcbcc4a4aa50a11673a99a7f4
-  Banks:
-  - {fileID: 11414656}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -486,7 +491,7 @@ MonoBehaviour:
   Name: 57616c6b696e67
   Min: 0
   Max: 1
---- !u!114 &11421896
+--- !u!114 &11421740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -497,15 +502,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Dungeon_Shrine_Snap
-  guid: 7dd6a36e1a21694a9d6f12e5ef5fba63
+  Path: event:/Character/Footstep/Footstep_Jump
+  guid: 32a0897545c8554cb5b9e8d4c8cbfec6
   Banks:
   - {fileID: 11414656}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 11484272}
+  IsOneShot: 1
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
 --- !u!114 &11422568
@@ -520,6 +524,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Reload
+  Min: 0
+  Max: 1
+--- !u!114 &11422688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Running
   Min: 0
   Max: 1
 --- !u!114 &11422810
@@ -540,7 +558,7 @@ MonoBehaviour:
   - Name: 4465736b746f70
     Value: 0
   Exists: 1
---- !u!114 &11423616
+--- !u!114 &11422878
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -551,7 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Running
+  Name: Dungeon_Shrine
   Min: 0
   Max: 1
 --- !u!114 &11423758
@@ -568,21 +586,7 @@ MonoBehaviour:
   Name: 57616c6b696e67
   Min: 0
   Max: 1
---- !u!114 &11425356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Running
-  Min: 0
-  Max: 1
---- !u!114 &11426278
+--- !u!114 &11424298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -593,31 +597,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Character/Footstep/Footstep_Anim
-  guid: 14b5fcaee8b3c242bba052576a1efe7d
+  Path: event:/Character/Lamp/Fire_Run
+  guid: a484176aac74bd448623e12d69b50243
   Banks:
   - {fileID: 11414656}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
---- !u!114 &11427050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Bread_Meat
-  Min: 0
-  Max: 1
---- !u!114 &11428182
+--- !u!114 &11427554
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -628,14 +618,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Enemies/Enemy_Footstep
-  guid: 1b168259e71b5d41b631146de771f807
+  Path: event:/Character/Crossbow/Arrow_Hit
+  guid: aeea156b216ca8428511c5a82667c504
   Banks:
   - {fileID: 11414656}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 11470956}
   MinDistance: 1
   MaxDistance: 20
 --- !u!114 &11429246
@@ -666,7 +657,7 @@ MonoBehaviour:
   Name: 52656c6f6164
   Min: 0
   Max: 1
---- !u!114 &11430070
+--- !u!114 &11429582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -677,13 +668,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Enemies/Enemy_Breath_Attack
-  guid: 39053b90ff22914d8d93b148f48bcb9c
+  Path: event:/Character/Breath/Breath_Calm
+  guid: 497604842eb826478b3d40dad36e104e
   Banks:
   - {fileID: 11414656}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -700,15 +691,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Environment/Ambience
   guid: 9e8cd82226eee6409d0198a5219a246d
-  Banks:
-  - {fileID: 11414656}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
-  Parameters:
-  - {fileID: 11457514}
-  - {fileID: 11408510}
-  - {fileID: 11408996}
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
 --- !u!114 &11431040
@@ -725,27 +712,6 @@ MonoBehaviour:
   Name: 4869745f57616c6c5f456e656d79
   Min: 0
   Max: 1
---- !u!114 &11431790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: snapshot:/Dungeon
-  guid: 0acc97b0b9559c439aa5d71013368a72
-  Banks:
-  - {fileID: 11414656}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
 --- !u!114 &11432594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,8 +725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Environment/Door_Portal
   guid: a8058c581c053144b70a5448f169e370
-  Banks:
-  - {fileID: 11414656}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -813,21 +778,7 @@ MonoBehaviour:
   - Name: 4465736b746f70
     Value: 0
   Exists: 1
---- !u!114 &11436894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Walking
-  Min: 0
-  Max: 1
---- !u!114 &11436896
+--- !u!114 &11435726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -838,8 +789,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Character/Crossbow/Arrow_Pickup
-  guid: 9b3fedd9ffc88d43b4da5310738b0026
+  Path: event:/Enemies/Enemy_Footstep
+  guid: 1b168259e71b5d41b631146de771f807
   Banks:
   - {fileID: 11414656}
   IsStream: 0
@@ -885,6 +836,27 @@ MonoBehaviour:
   - {fileID: 11448824}
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &11439746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy_Breath_Idle
+  guid: f1e9dfcbcbcc4a4aa50a11673a99a7f4
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &11441270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -926,16 +898,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character/Crossbow/Crossbow
   guid: bfe1f0cbee8d224fb403dc1c8fbe72ff
-  Banks:
-  - {fileID: 11414656}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 11412040}
+  - {fileID: 11406436}
+  - {fileID: 11404648}
   MinDistance: 1
   MaxDistance: 20
---- !u!114 &11448366
+--- !u!114 &11447836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -943,12 +915,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Bread_Meat
-  Min: 0
-  Max: 1
+  Path: event:/Environment/Door_Portal
+  guid: a8058c581c053144b70a5448f169e370
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &11448620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,14 +969,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character/Lamp/Fire
   guid: 7aa8106a32b33042afbffa1325bfc590
-  Banks:
-  - {fileID: 11414656}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &11449914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Distance
+  Min: 0
+  Max: 20
 --- !u!114 &11451056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,8 +1021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character/Lamp/Klinks
   guid: 19ec8a4db16e20478feb6a6e94e1eba1
-  Banks:
-  - {fileID: 11414656}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1056,28 +1047,6 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
---- !u!114 &11453842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Environment/Shrine
-  guid: 4829179aec15ee45a78fe30e1e05faf9
-  Banks:
-  - {fileID: 11414656}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 11477236}
   MinDistance: 1
   MaxDistance: 20
 --- !u!114 &11453858
@@ -1147,34 +1116,6 @@ MonoBehaviour:
   Name: 4869745f57616c6c5f456e656d79
   Min: 0
   Max: 1
---- !u!114 &11457060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Hit_Wall_Enemy
-  Min: 0
-  Max: 1
---- !u!114 &11457514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Insanity
-  Min: 0
-  Max: 100
 --- !u!114 &11458002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,27 +1134,6 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
---- !u!114 &11459044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Character/Lamp/Fire_Run
-  guid: a484176aac74bd448623e12d69b50243
-  Banks:
-  - {fileID: 11414656}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -1245,6 +1165,20 @@ MonoBehaviour:
   Name: Hit_Wall_Enemy
   Min: 0
   Max: 1
+--- !u!114 &11461400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Running
+  Min: 0
+  Max: 1
 --- !u!114 &11461484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,21 +1207,7 @@ MonoBehaviour:
   Name: Running
   Min: 0
   Max: 1
---- !u!114 &11462296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Walking
-  Min: 0
-  Max: 1
---- !u!114 &11462884
+--- !u!114 &11462804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1298,8 +1218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Character/Footstep/Footstep_Jump
-  guid: 32a0897545c8554cb5b9e8d4c8cbfec6
+  Path: event:/Enemies/Enemy_Breath_Death
+  guid: 800e90116cf9a54394ee4d41b099b846
   Banks:
   - {fileID: 11414656}
   IsStream: 0
@@ -1352,7 +1272,7 @@ MonoBehaviour:
   - {fileID: 11485586}
   MinDistance: 1
   MaxDistance: 20
---- !u!114 &11466608
+--- !u!114 &11465188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1363,59 +1283,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Character/Footstep/Footstep_Land
-  guid: 8fa019440422974ba0df0d3a4fe6f4db
+  Path: event:/Environment/Ambience
+  guid: 9e8cd82226eee6409d0198a5219a246d
   Banks:
   - {fileID: 11414656}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
---- !u!114 &11466648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Character/Breath/Healing
-  guid: 3a8150550f914e43ab5e2da8692c10c6
-  Banks:
-  - {fileID: 11414656}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters:
-  - {fileID: 11427050}
+  - {fileID: 11469366}
+  - {fileID: 11400486}
+  - {fileID: 11422878}
   MinDistance: 1
   MaxDistance: 20
---- !u!114 &11468248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: snapshot:/Shrine
-  guid: c4f0ab02342ddb48a0621b31b82121f8
-  Banks:
-  - {fileID: 11414656}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
 --- !u!114 &11468710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1430,6 +1310,41 @@ MonoBehaviour:
   Name: Reload
   Min: 0
   Max: 1
+--- !u!114 &11469028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Breath/Breath_Damage
+  guid: 957c1a5d8078ff46bf3c9d6a93055a85
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &11469366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Insanity
+  Min: 0
+  Max: 100
 --- !u!114 &11469630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1451,7 +1366,42 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
---- !u!114 &11470846
+--- !u!114 &11469770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Reload
+  Min: 0
+  Max: 1
+--- !u!114 &11470358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Lamp/Klinks
+  guid: 19ec8a4db16e20478feb6a6e94e1eba1
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &11470956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1509,7 +1459,21 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
---- !u!114 &11474446
+--- !u!114 &11472620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Hit_Wall_Enemy
+  Min: 0
+  Max: 1
+--- !u!114 &11474088
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1544,6 +1508,27 @@ MonoBehaviour:
   Name: Walking
   Min: 0
   Max: 1
+--- !u!114 &11475056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy_Breath_Damage
+  guid: 5a022de95d21a24da85271203172b890
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &11475362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1565,7 +1550,28 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
---- !u!114 &11477236
+--- !u!114 &11475964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Footstep/Footstep_Anim
+  guid: 14b5fcaee8b3c242bba052576a1efe7d
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &11476126
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1576,9 +1582,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Distance
+  Name: Insanity
   Min: 0
-  Max: 20
+  Max: 100
+--- !u!114 &11478302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Breath/Healing
+  guid: 3a8150550f914e43ab5e2da8692c10c6
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 11498152}
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &11478744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Walking
+  Min: 0
+  Max: 1
 --- !u!114 &11480362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1591,6 +1633,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Running
+  Min: 0
+  Max: 1
+--- !u!114 &11482000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Footstep/Footstep
+  guid: 94e183ffb83b914698c30cab99f23cda
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 11478744}
+  - {fileID: 11461400}
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &11482010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Bread_Meat
   Min: 0
   Max: 1
 --- !u!114 &11482154
@@ -1621,7 +1700,7 @@ MonoBehaviour:
   Name: Walking
   Min: 0
   Max: 1
---- !u!114 &11482708
+--- !u!114 &11483380
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1632,51 +1711,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: event:/Enemies/Enemy_Breath_Death
-  guid: 800e90116cf9a54394ee4d41b099b846
+  Path: event:/Environment/Shrine
+  guid: 4829179aec15ee45a78fe30e1e05faf9
   Banks:
   - {fileID: 11414656}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 11449914}
   MinDistance: 1
   MaxDistance: 20
---- !u!114 &11482826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Enemies/Enemy_Breath_Damage
-  guid: 5a022de95d21a24da85271203172b890
-  Banks:
-  - {fileID: 11414656}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
---- !u!114 &11484272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Dungeon_Shrine
-  Min: 0
-  Max: 1
 --- !u!114 &11485586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1691,6 +1736,28 @@ MonoBehaviour:
   Name: 52756e6e696e67
   Min: 0
   Max: 1
+--- !u!114 &11485738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Dungeon_Shrine_Snap
+  guid: 7dd6a36e1a21694a9d6f12e5ef5fba63
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 11408120}
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &11486428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1770,27 +1837,6 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
---- !u!114 &11488508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: event:/Character/Breath/Breath_Damage
-  guid: 957c1a5d8078ff46bf3c9d6a93055a85
-  Banks:
-  - {fileID: 11414656}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
 --- !u!114 &11488982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1818,12 +1864,89 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Environment/Door_Metal_Opening_Sequence
   guid: edb9cc69331f124ebb6fe9bd112041ae
+  Banks: []
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &11491372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Environment/Water
+  guid: 0627f8b3b5cc01409bd588ac4f9eecac
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &11491514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Reload
+  Min: 0
+  Max: 1
+--- !u!114 &11492200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Crossbow/Arrow_Pickup
+  guid: 9b3fedd9ffc88d43b4da5310738b0026
   Banks:
   - {fileID: 11414656}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &11492536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Character/Crossbow/Crossbow
+  guid: bfe1f0cbee8d224fb403dc1c8fbe72ff
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 11491514}
   MinDistance: 1
   MaxDistance: 20
 --- !u!114 &11492830
@@ -1903,7 +2026,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
---- !u!114 &11496728
+--- !u!114 &11497096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1911,12 +2034,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Insanity
-  Min: 0
-  Max: 100
+  Path: event:/Character/Footstep/Footstep_Land
+  guid: 8fa019440422974ba0df0d3a4fe6f4db
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+--- !u!114 &11497548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Enemy_Breath_Attack
+  guid: 39053b90ff22914d8d93b148f48bcb9c
+  Banks:
+  - {fileID: 11414656}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
 --- !u!114 &11497958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1930,13 +2081,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Character/Footstep/Footstep
   guid: 94e183ffb83b914698c30cab99f23cda
-  Banks:
-  - {fileID: 11414656}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 11436894}
-  - {fileID: 11425356}
+  - {fileID: 11429246}
+  - {fileID: 11406584}
   MinDistance: 1
   MaxDistance: 20
+--- !u!114 &11498152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Bread_Meat
+  Min: 0
+  Max: 1
