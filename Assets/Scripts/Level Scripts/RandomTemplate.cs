@@ -72,7 +72,8 @@ public class RandomTemplate : MonoBehaviour
     protected void CopyTransform(Transform aTarget, Transform aSource)
     {
         aTarget.parent = aSource.parent;
-        aTarget.localPosition += aSource.localPosition;
+        //aTarget.localPosition += aSource.localPosition;
+        aTarget.position = aSource.position;
         aTarget.localEulerAngles += aSource.localEulerAngles;
         aTarget.localScale = Vector3.Scale(aTarget.localScale, aSource.localScale);
     }
