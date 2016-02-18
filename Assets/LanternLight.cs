@@ -44,8 +44,8 @@ public class LanternLight : MonoBehaviour {
         m_DecreaseDrainHalf = .8f;
         m_DecreaseDrainQuart = .6f;
 
-        m_RangeMax = 8;
-        m_RangeMin = 3;
+        m_RangeMax = 20;
+        m_RangeMin = 8;
 
         m_IntensityMax = 2.5f;
         m_IntensityMin = .7f;
