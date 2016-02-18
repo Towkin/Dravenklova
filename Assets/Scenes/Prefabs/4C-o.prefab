@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3394538}
   - 65: {fileID: 6544374}
   - 23: {fileID: 2306588}
+  - 114: {fileID: 11455362}
   m_Layer: 0
   m_Name: ConnectionPoint3
   m_TagString: Untagged
@@ -463,6 +464,7 @@ GameObject:
   - 33: {fileID: 3358778}
   - 65: {fileID: 6577350}
   - 23: {fileID: 2309556}
+  - 114: {fileID: 11438336}
   m_Layer: 0
   m_Name: ConnectionPoint1
   m_TagString: Untagged
@@ -614,6 +616,7 @@ GameObject:
   - 33: {fileID: 3314818}
   - 65: {fileID: 6504326}
   - 23: {fileID: 2321178}
+  - 114: {fileID: 11469016}
   m_Layer: 0
   m_Name: ConnectionPoint2 (1)
   m_TagString: Untagged
@@ -820,6 +823,7 @@ GameObject:
   - 33: {fileID: 3327956}
   - 65: {fileID: 6544400}
   - 23: {fileID: 2330918}
+  - 114: {fileID: 11497768}
   m_Layer: 0
   m_Name: ConnectionPoint2
   m_TagString: Untagged
@@ -4659,6 +4663,54 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11438336
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef36d6e97b3b194899c28faad1ace64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PreferedPrefabs: []
+--- !u!114 &11455362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef36d6e97b3b194899c28faad1ace64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PreferedPrefabs: []
+--- !u!114 &11469016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef36d6e97b3b194899c28faad1ace64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PreferedPrefabs: []
+--- !u!114 &11497768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef36d6e97b3b194899c28faad1ace64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PreferedPrefabs: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

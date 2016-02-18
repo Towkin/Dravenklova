@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3361086}
   - 65: {fileID: 6536670}
   - 23: {fileID: 2396574}
+  - 114: {fileID: 11496294}
   m_Layer: 0
   m_Name: ConnectionPoint2
   m_TagString: Untagged
@@ -218,6 +219,7 @@ GameObject:
   - 33: {fileID: 3377806}
   - 65: {fileID: 6523552}
   - 23: {fileID: 2350070}
+  - 114: {fileID: 11417262}
   m_Layer: 0
   m_Name: ConnectionPoint3
   m_TagString: Untagged
@@ -404,6 +406,7 @@ GameObject:
   - 33: {fileID: 3356836}
   - 65: {fileID: 6519730}
   - 23: {fileID: 2349954}
+  - 114: {fileID: 11459686}
   m_Layer: 0
   m_Name: ConnectionPoint1
   m_TagString: Untagged
@@ -2655,6 +2658,42 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11417262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef36d6e97b3b194899c28faad1ace64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PreferedPrefabs: []
+--- !u!114 &11459686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef36d6e97b3b194899c28faad1ace64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PreferedPrefabs: []
+--- !u!114 &11496294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef36d6e97b3b194899c28faad1ace64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PreferedPrefabs: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
