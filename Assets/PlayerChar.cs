@@ -20,6 +20,7 @@ public class PlayerChar : MonoBehaviour {
     private float m_PlayerLanternCount;
     private float m_PlayerLanternCountFin;
     [SerializeField]private float m_PlayerSanityDmg;
+    
 
     public float PlayerHealth
     {
@@ -107,7 +108,7 @@ public class PlayerChar : MonoBehaviour {
 
         if (m_PlayerHealth <= 0)
         {
-            //this does death
+            //TODO: this does death
         }
     }
 }
