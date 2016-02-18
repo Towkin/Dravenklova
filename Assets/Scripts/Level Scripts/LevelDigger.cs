@@ -5,7 +5,8 @@ using System.Collections.Generic;
 public class LevelDigger : MonoBehaviour {
     [SerializeField]
     private bool m_IgnoreBlockerTests = false;
-
+    [SerializeField]
+    private bool m_SpawnBlockerTests = false;
     [SerializeField]
     private bool m_DebugLogs = false;
 
@@ -168,11 +169,14 @@ public class LevelDigger : MonoBehaviour {
                     TestTransform.rotation = TestBlocker.transform.rotation * ConnectionRotation;
                     TestTransform.localScale = TestBlocker.transform.localScale;
 
-                    GameObject TestingObject = Instantiate(m_Cube);
-                    TestingObject.name = TestBlocker.transform.parent.name + "->" + TestBlocker.name + " pretender";
-                    TestingObject.transform.position = TestTransform.position;
-                    TestingObject.transform.rotation = TestTransform.rotation;
-                    TestingObject.transform.localScale = TestTransform.localScale;
+                    if (m_SpawnBlockerTests)
+                    {
+                        GameObject TestingObject = Instantiate(m_Cube);
+                        TestingObject.name = TestBlocker.transform.parent.name + "->" + TestBlocker.name + " pretender";
+                        TestingObject.transform.position = TestTransform.position;
+                        TestingObject.transform.rotation = TestTransform.rotation;
+                        TestingObject.transform.localScale = TestTransform.localScale;
+                    }
 
                     // Go through ALL other potential blockers (tagged "PrefabBlocker").
                     foreach (GameObject OtherBlockers in ExistingPrefabBlockers)

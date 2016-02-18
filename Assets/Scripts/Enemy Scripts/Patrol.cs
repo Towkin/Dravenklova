@@ -5,8 +5,14 @@ public class Patrol : MonoBehaviour
 {
 
     // Want to make the Enemy follow the target(Player)...
-   
+    [SerializeField]
+    private bool m_Chasing; // Is he chasing the player?
+    [SerializeField]
+    private GameObject m_Target; // The target we want to follow(player)
+    public float m_Distance = 20f;
 
+
+     
 
 
     [SerializeField]
@@ -22,13 +28,15 @@ public class Patrol : MonoBehaviour
 
     void Awake()
     {
+
+       
         
     }
     // Use this for initialization
     void Start()
     {
 
-       
+      
 
 
 
@@ -38,7 +46,7 @@ public class Patrol : MonoBehaviour
         // between points, (ie, the agent dosnt slow down as it approches a destination point).
 
         //m_Agent.autoBraking = false;
-
+       
         GotoNextPoint();
 
     }
@@ -49,7 +57,7 @@ public class Patrol : MonoBehaviour
         //Returns if no points have been set up
 
 
-
+        
 
 
         if (m_Points.Length == 0)
@@ -75,13 +83,18 @@ public class Patrol : MonoBehaviour
 
         // else if
 
-       
 
+        if (Vector3.Distance(m_Target.transform.position, transform.position) <= m_Distance)
+        {
+
+            Debug.Log("wat up");
+
+        }
 
 
         // Move towards the player...
-      
-        
+
+
         // Choose the next destination point when the agent gets
         // close to the current one.
         if (m_Agent.remainingDistance < 0.5f)

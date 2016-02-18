@@ -11,9 +11,10 @@ GameObject:
   - 33: {fileID: 3361086}
   - 65: {fileID: 6536670}
   - 23: {fileID: 2396574}
+  - 114: {fileID: 11425640}
   m_Layer: 0
   m_Name: ConnectionPoint2
-  m_TagString: Untagged
+  m_TagString: PrefabConnection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +127,7 @@ GameObject:
   - 23: {fileID: 2300648}
   m_Layer: 0
   m_Name: RoomPlace (3)
-  m_TagString: Untagged
+  m_TagString: PrefabBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,9 +219,10 @@ GameObject:
   - 33: {fileID: 3377806}
   - 65: {fileID: 6523552}
   - 23: {fileID: 2350070}
+  - 114: {fileID: 11496980}
   m_Layer: 0
   m_Name: ConnectionPoint3
-  m_TagString: Untagged
+  m_TagString: PrefabConnection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,7 +259,7 @@ GameObject:
   - 23: {fileID: 2323642}
   m_Layer: 0
   m_Name: RoomPlace (2)
-  m_TagString: Untagged
+  m_TagString: PrefabBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,7 +277,7 @@ GameObject:
   - 23: {fileID: 2360094}
   m_Layer: 0
   m_Name: RoomPlace (1)
-  m_TagString: Untagged
+  m_TagString: PrefabBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -388,7 +390,7 @@ GameObject:
   - 23: {fileID: 2395116}
   m_Layer: 0
   m_Name: RoomPlace (4)
-  m_TagString: Untagged
+  m_TagString: PrefabBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -404,9 +406,10 @@ GameObject:
   - 33: {fileID: 3356836}
   - 65: {fileID: 6519730}
   - 23: {fileID: 2349954}
+  - 114: {fileID: 11453948}
   m_Layer: 0
   m_Name: ConnectionPoint1
-  m_TagString: Untagged
+  m_TagString: PrefabConnection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -622,7 +625,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -130.03833, y: 134.10938, z: 17.853865}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 481022}
@@ -757,7 +760,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 147258}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
   m_LocalPosition: {x: 24.82, y: 1, z: -45.48}
   m_LocalScale: {x: 5.619998, y: 1, z: 0}
   m_Children: []
@@ -865,7 +868,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100814}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: 0.7071066, z: 0, w: -0.70710695}
   m_LocalPosition: {x: -20.67, y: 1, z: -24.81}
   m_LocalScale: {x: 5.619999, y: 1, z: 0}
   m_Children: []
@@ -2655,6 +2658,42 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11425640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef36d6e97b3b194899c28faad1ace64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PreferedPrefabs: []
+--- !u!114 &11453948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef36d6e97b3b194899c28faad1ace64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PreferedPrefabs: []
+--- !u!114 &11496980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef36d6e97b3b194899c28faad1ace64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PreferedPrefabs: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

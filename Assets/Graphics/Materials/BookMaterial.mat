@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: FloorDiffuse
+  m_Name: BookMaterial
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _NORMALMAP _PARALLAXMAP
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -19,14 +19,14 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 41aa2782b590c524b9edd386c384eeeb, type: 3}
+          m_Texture: {fileID: 2800000, guid: 43b4b0c4e9314b1439443c9612fe2e3c, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BumpMap
         second:
-          m_Texture: {fileID: 2800000, guid: 3d195681240a650458cf006cbfc13e92, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -40,14 +40,14 @@ Material:
         first:
           name: _ParallaxMap
         second:
-          m_Texture: {fileID: 2800000, guid: c7ded9d7b8399394aa0f978081d72aec, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _OcclusionMap
         second:
-          m_Texture: {fileID: 2800000, guid: 6351dff14c4e8fd48a75e4b7a7684f84, type: 3}
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -94,7 +94,7 @@ Material:
       data:
         first:
           name: _Parallax
-        second: 0.0344
+        second: 0.02
       data:
         first:
           name: _ZWrite
@@ -102,11 +102,11 @@ Material:
       data:
         first:
           name: _Glossiness
-        second: 0.14
+        second: 0.885
       data:
         first:
           name: _BumpScale
-        second: 1.5
+        second: 1
       data:
         first:
           name: _OcclusionStrength
@@ -126,7 +126,7 @@ Material:
       data:
         first:
           name: _Metallic
-        second: 0
+        second: 0.016
     m_Colors:
       data:
         first:
@@ -135,4 +135,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 0.5347102, g: 0.55206895, b: 0.63235295, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 1}
