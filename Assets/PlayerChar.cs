@@ -14,11 +14,13 @@ public class PlayerChar : MonoBehaviour {
 
     [SerializeField]private int m_PlayerAmmo;
     [SerializeField]private int m_PlayerAmmoMax;
+    [SerializeField]private float m_PlayerDamage;
 
     private float m_PlayerHolyMod;
     private float m_PlayerLanternCount;
     private float m_PlayerLanternCountFin;
     [SerializeField]private float m_PlayerSanityDmg;
+    
 
     public float PlayerHealth
     {
@@ -61,6 +63,15 @@ public class PlayerChar : MonoBehaviour {
         }
     }
 
+    public float PlayerDamage
+    {
+        get { return m_PlayerDamage; }
+        set
+        {
+            m_PlayerDamage = value;
+        }
+    }
+
 
 
     // Use this for initialization
@@ -97,7 +108,7 @@ public class PlayerChar : MonoBehaviour {
 
         if (m_PlayerHealth <= 0)
         {
-            //this does death
+            //TODO: this does death
         }
     }
 }

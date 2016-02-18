@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="Snapshot" id="{b097cc0a-55b9-439c-9aa5-d71013368a72}">
+        <property name="name">
+            <value>Dungeon</value>
+        </property>
+        <relationship name="automatableProperties">
+            <destination>{fd1d964d-cf91-4f20-a33c-b02d61ad2921}</destination>
+        </relationship>
+        <relationship name="markerTracks">
+            <destination>{c90897ae-0210-41ed-880f-a23312ae3812}</destination>
+        </relationship>
+        <relationship name="timeline">
+            <destination>{62c1e970-4e91-4056-b14c-ee9b826f843d}</destination>
+        </relationship>
+        <relationship name="snapshotMasterTrack">
+            <destination>{8d780fd2-b883-4a46-bf80-0229ba26d32a}</destination>
+        </relationship>
+        <relationship name="mixer">
+            <destination>{6face747-57b3-48df-ad5e-d72e58b75d07}</destination>
+        </relationship>
+    </object>
+    <object class="EventAutomatableProperties" id="{fd1d964d-cf91-4f20-a33c-b02d61ad2921}"/>
+    <object class="MarkerTrack" id="{c90897ae-0210-41ed-880f-a23312ae3812}"/>
+    <object class="Timeline" id="{62c1e970-4e91-4056-b14c-ee9b826f843d}"/>
+    <object class="SnapshotMasterTrack" id="{8d780fd2-b883-4a46-bf80-0229ba26d32a}"/>
+</objects>

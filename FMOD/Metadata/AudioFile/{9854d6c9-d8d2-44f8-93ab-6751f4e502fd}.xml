@@ -8,10 +8,10 @@
             <value>2</value>
         </property>
         <property name="length">
-            <value>1.1249886621315193</value>
+            <value>1.7024943310657596</value>
         </property>
         <property name="audioFilePath">
-            <value>$(AUDIO_BIN_DIR)/Crossbow_Reload_Fail_Placeholder {51d5aef5-6e16-41d0-9c53-ac80c4c8f662}.ogg</value>
+            <value>$(AUDIO_BIN_DIR)/Crossbow_Reload_Fail_02 {0fd694a1-11e9-458d-9490-c5cacf696d2f}.ogg</value>
         </property>
         <relationship name="container">
             <destination>{286ade78-a370-45be-9784-b4c00db211f9}</destination>
