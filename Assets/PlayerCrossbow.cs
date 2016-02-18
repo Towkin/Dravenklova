@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerCrossbow : MonoBehaviour {
 
     public GameObject BoltPrefab;
+    public GameObject Crossbow;
     float m_BoltImpulse = 50f;
 
     private float m_PlayerReloadCount = 0f;
@@ -11,6 +12,7 @@ public class PlayerCrossbow : MonoBehaviour {
 
     [SerializeField]private bool m_Loaded;
     [SerializeField]private bool m_IsLoading;
+    
 
     private PlayerChar m_PlayerChar;
     
@@ -28,7 +30,7 @@ public class PlayerCrossbow : MonoBehaviour {
             if (m_Loaded)
             {
                 Camera m_Cam = Camera.main;
-                GameObject BoltShot = (GameObject)Instantiate(BoltPrefab, m_Cam.transform.position + m_Cam.transform.forward * 1f, m_Cam.transform.rotation);
+                GameObject BoltShot = (GameObject)Instantiate(BoltPrefab, Crossbow.transform.position - Crossbow.transform.forward * 1f, m_Cam.transform.rotation);
                 Rigidbody BoltBody = BoltShot.GetComponent<Rigidbody>();
                 BoltBody.AddForce(m_Cam.transform.forward * m_BoltImpulse, ForceMode.Impulse);
                 BoltShot.transform.up = m_Cam.transform.forward;
