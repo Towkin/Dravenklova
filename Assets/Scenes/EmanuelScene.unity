@@ -145,6 +145,7 @@ MonoBehaviour:
   - {fileID: 180570, guid: 733613142896c07499fa0a168062b7f2, type: 2}
   - {fileID: 180368, guid: 028421fee76cd3b48aef420a406accb1, type: 2}
   - {fileID: 182672, guid: 5a2c58e3a8376ad4b88f312d15739abf, type: 2}
+  - {fileID: 160378, guid: fe00ac8efc5c0fc4bb1d4229eb546722, type: 2}
   m_EndRooms:
   - {fileID: 153564, guid: fdc0e1fac8b57554abcc0713fd3e4ffe, type: 2}
   - {fileID: 185276, guid: e3b7eb93d758e5745b98606b65811db9, type: 2}
