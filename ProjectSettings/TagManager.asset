@@ -12,6 +12,8 @@ TagManager:
   - PrefabConnection
   - PrefabBlocker
   - Ghoul
+  - Fire
+  - Enemy
   layers:
   - Default
   - TransparentFX
