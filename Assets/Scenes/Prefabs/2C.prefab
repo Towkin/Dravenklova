@@ -164,7 +164,7 @@ GameObject:
   - 23: {fileID: 2357774}
   m_Layer: 0
   m_Name: RoomPlace (3)
-  m_TagString: Untagged
+  m_TagString: PrefabBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +182,7 @@ GameObject:
   - 23: {fileID: 2373934}
   m_Layer: 0
   m_Name: RoomPlace (1)
-  m_TagString: Untagged
+  m_TagString: PrefabBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -333,7 +333,7 @@ GameObject:
   - 23: {fileID: 2356294}
   m_Layer: 0
   m_Name: ConnectionPoint2
-  m_TagString: Untagged
+  m_TagString: PrefabConnection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -446,7 +446,7 @@ GameObject:
   - 23: {fileID: 2354490}
   m_Layer: 0
   m_Name: ConnectionPoint1
-  m_TagString: Untagged
+  m_TagString: PrefabConnection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -464,7 +464,7 @@ GameObject:
   - 23: {fileID: 2353924}
   m_Layer: 0
   m_Name: RoomPlace (2)
-  m_TagString: Untagged
+  m_TagString: PrefabBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -578,7 +578,7 @@ Transform:
   m_LocalScale: {x: 5.619999, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 446628}
-  m_RootOrder: 21
+  m_RootOrder: 22
 --- !u!4 &437010
 Transform:
   m_ObjectHideFlags: 1
@@ -602,7 +602,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 446628}
-  m_RootOrder: 18
+  m_RootOrder: 17
 --- !u!4 &439922
 Transform:
   m_ObjectHideFlags: 1
@@ -664,14 +664,14 @@ Transform:
   - {fileID: 437010}
   - {fileID: 421320}
   - {fileID: 413692}
-  - {fileID: 462674}
   - {fileID: 453622}
   - {fileID: 499566}
   - {fileID: 439414}
+  - {fileID: 460342}
   - {fileID: 474576}
   - {fileID: 494098}
+  - {fileID: 462674}
   - {fileID: 433814}
-  - {fileID: 460342}
   - {fileID: 439922}
   - {fileID: 431396}
   - {fileID: 489486}
@@ -700,7 +700,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 446628}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!4 &458546
 Transform:
   m_ObjectHideFlags: 1
@@ -724,7 +724,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 446628}
-  m_RootOrder: 22
+  m_RootOrder: 18
 --- !u!4 &462028
 Transform:
   m_ObjectHideFlags: 1
@@ -743,12 +743,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166458}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071067}
   m_LocalPosition: {x: -28.94, y: 1, z: 0.01}
   m_LocalScale: {x: 5.62, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 446628}
-  m_RootOrder: 15
+  m_RootOrder: 21
 --- !u!4 &474576
 Transform:
   m_ObjectHideFlags: 1
@@ -827,8 +827,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129118}
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5000001, w: 0.49999994}
-  m_LocalPosition: {x: 16.54, y: 3.9, z: 8.27}
+  m_LocalRotation: {x: -0.49999997, y: 0.5, z: 0.5000001, w: 0.4999999}
+  m_LocalPosition: {x: 16.54, y: 3.9, z: 8.269997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 446628}
@@ -856,7 +856,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 446628}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!23 &2303000
 MeshRenderer:
   m_ObjectHideFlags: 1
