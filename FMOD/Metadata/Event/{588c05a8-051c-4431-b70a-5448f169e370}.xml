@@ -106,6 +106,9 @@
         </relationship>
     </object>
     <object class="EventMixerGroup" id="{a70560b7-9257-442a-9f4b-dc975c3a062e}">
+        <property name="volume">
+            <value>2.5</value>
+        </property>
         <property name="name">
             <value>Door_Portal</value>
         </property>
