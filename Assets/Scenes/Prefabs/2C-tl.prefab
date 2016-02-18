@@ -127,7 +127,7 @@ GameObject:
   - 23: {fileID: 2372266}
   m_Layer: 0
   m_Name: RoomPlace (1)
-  m_TagString: Untagged
+  m_TagString: PrefabBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,9 +161,10 @@ GameObject:
   - 33: {fileID: 3377966}
   - 65: {fileID: 6582032}
   - 23: {fileID: 2389004}
+  - 114: {fileID: 11466646}
   m_Layer: 0
   m_Name: ConnectionPoint1
-  m_TagString: Untagged
+  m_TagString: PrefabConnection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -276,7 +277,7 @@ GameObject:
   - 23: {fileID: 2385692}
   m_Layer: 0
   m_Name: RoomPlace (2)
-  m_TagString: Untagged
+  m_TagString: PrefabBlocker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -330,9 +331,10 @@ GameObject:
   - 33: {fileID: 3390050}
   - 65: {fileID: 6561534}
   - 23: {fileID: 2333990}
+  - 114: {fileID: 11429378}
   m_Layer: 0
   m_Name: ConnectionPoint2
-  m_TagString: Untagged
+  m_TagString: PrefabConnection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,7 +408,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 140876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -122.86117, y: 96.71875, z: 4.314149}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 460414}
@@ -1848,6 +1850,30 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11429378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 175994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef36d6e97b3b194899c28faad1ace64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PreferedPrefabs: []
+--- !u!114 &11466646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef36d6e97b3b194899c28faad1ace64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PreferedPrefabs: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
