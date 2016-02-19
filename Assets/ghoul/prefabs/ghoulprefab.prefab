@@ -659,6 +659,7 @@ GameObject:
   - 114: {fileID: 11453862}
   - 114: {fileID: 11458794}
   - 114: {fileID: 11455796}
+  - 136: {fileID: 13659176}
   m_Layer: 0
   m_Name: ghoulprefab
   m_TagString: Enemy
@@ -1760,8 +1761,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160680}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.9153833, y: 0.49810052, z: -6.9623766}
+  m_LocalRotation: {x: 0, y: -0.5668897, z: 0, w: 0.8237937}
+  m_LocalPosition: {x: -14.3, y: 0.49810052, z: -8.24}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_Children:
   - {fileID: 418706}
@@ -2025,6 +2026,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 255061867988b544593b1952e2ace46a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &13659176
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160680}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!137 &13714572
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
