@@ -107,6 +107,23 @@ public class EnemyBehaviour : MonoBehaviour
             return m_Navigator;
         }
     }
+    private float m_Health = 1f;
+    private float m_MaxHealth = 1f;
+    public float Health
+    {
+        get { return m_Health; }
+        set
+        {
+            m_Health = Mathf.Clamp(value, 0f, m_MaxHealth);
+            if(m_Health == 0f)
+            {
+                IsDead = true;
+                Destroy(GetComponent<CapsuleCollider>());
+            }
+        }
+    }
+
+
     private float m_AttackTimer = 0f;
     private float AttackTimer
     {

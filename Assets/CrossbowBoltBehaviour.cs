@@ -31,7 +31,7 @@ public class CrossbowBoltBehaviour : MonoBehaviour {
                 if (m_Hit.collider.tag == "Enemy")
                 {
                     // TODO: Deal damage on enemy
-                    
+                    m_Hit.collider.gameObject.GetComponent<EnemyBehaviour>().Health -= 10f;
 
                     Destroy(gameObject);
                 }
