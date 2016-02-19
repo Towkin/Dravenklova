@@ -12,19 +12,25 @@ public class LanternLight : MonoBehaviour {
     private PlayerChar m_PlayerChar;
     private float m_Rnd;
 
-    private float m_RangeMax;
-    private float m_RangeMin;
+    [SerializeField]
+    private float m_RangeMax = 8;
+    [SerializeField]
+    private float m_RangeMin = 3;
     private float m_CurrRange;
 
-    private float m_IntensityMax;
-    private float m_IntensityMin;
+    [SerializeField]
+    private float m_IntensityMax = 2.5f;
+    [SerializeField]
+    private float m_IntensityMin = 0.7f;
     private float m_CurrIntensity;
-    private float m_DecreaseDrainHalf;
-    private float m_DecreaseDrainQuart;
+    [SerializeField]
+    private float m_DecreaseDrainHalf = 0.8f;
+    [SerializeField]
+    private float m_DecreaseDrainQuart = 0.6f;
 
     [SerializeField]private float m_OilDrainWalk;
     [SerializeField]private float m_OilDrainRun;
-    [SerializeField]private float m_OilDrain;
+    [SerializeField]private float m_OilDrain = 0.5f;
 
 
     [SerializeField]
@@ -41,16 +47,7 @@ public class LanternLight : MonoBehaviour {
         m_Controller = MyController.GetComponent<FirstPersonController>();
         m_Light = GetComponent<Light>();
         m_PlayerChar = MyController.GetComponent<PlayerChar>();
-        m_DecreaseDrainHalf = .8f;
-        m_DecreaseDrainQuart = .6f;
 
-        m_RangeMax = 20;
-        m_RangeMin = 8;
-
-        m_IntensityMax = 2.5f;
-        m_IntensityMin = .7f;
-
-        m_OilDrain = .5f;
         m_OilDrainWalk = m_OilDrain * Time.fixedDeltaTime;
         m_OilDrainRun = ((m_OilDrain * 2.5f) * Time.fixedDeltaTime);
 	}

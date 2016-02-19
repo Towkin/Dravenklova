@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -13,43 +14,146 @@ public class LevelDigger : MonoBehaviour {
     [SerializeField]
     private GameObject m_Cube;
 
-    private Stack<GameObject> m_PrefabBranch = new Stack<GameObject>();
-    public Stack<GameObject> PrefabBranch
+    private Stack<GameObject> m_RoomBranch = new Stack<GameObject>();
+    public Stack<GameObject> RoomBranch
     {
-        get { return m_PrefabBranch; }
+        get { return m_RoomBranch; }
     }
 
     [SerializeField]
-    private GameObject m_FirstRoomPrefab;
-    public GameObject FirstRoomPrefab
+    private GameObject m_FirstRoom;
+    public GameObject FirstRoom
     {
-        get { return m_FirstRoomPrefab; }
+        get { return m_FirstRoom; }
     }
 
     [SerializeField]
-    private GameObject[] m_PrefabArray;
-    public GameObject[] PrefabArray
+    private GameObject[] m_BranchingRooms;
+    public GameObject[] BranchingRooms
     {
-        get { return m_PrefabArray; }
+        get { return m_BranchingRooms; }
+    }
+
+    [SerializeField]
+    private GameObject[] m_EndRooms;
+    public GameObject[] EndRooms
+    {
+        get { return m_EndRooms; }
+    }
+
+    [SerializeField]
+    private GameObject[] m_EndWalls;
+    public GameObject[] EndWalls
+    {
+        get { return m_EndWalls; }
+    }
+    [SerializeField]
+    private GameObject[] m_Shrines;
+    public GameObject[] Shrines
+    {
+        get { return m_Shrines; }
+    }
+
+    //[SerializeField]
+    private GameObject[] m_Enemies;
+    public GameObject[] Enemies
+    {
+        get { return m_Enemies; }
+        private set { m_Enemies = value; }
+    }
+
+    private Queue<GameObject> m_LevelObjects = new Queue<GameObject>();
+    public Queue<GameObject> LevelObjects
+    {
+        get { return m_LevelObjects; }
     }
 
     int Counter = 0;
     
     void Start () {
-        PrefabBranch.Push(FirstRoomPrefab);
+        RoomBranch.Push(FirstRoom);
+        LevelObjects.Enqueue(FirstRoom);
 
-        while(Counter < 10 && PrefabBranch.Peek() != null)
+        BuildLevel(4);
+
+        NavMeshBuilder.BuildNavMesh();
+
+        // List<ConnectionPoint> ConnectionPoints = new List<ConnectionPoint>();
+        // ConnectionPoints.AddRange(FindObjectsOfType<ConnectionPoint>());
+
+        //foreach(ConnectionPoint ThisConnection in ConnectionPoints)
+        //{
+        //    foreach(ConnectionPoint OtherConnection in ConnectionPoints)
+        //    {
+
+        //    }
+        //}
+
+        ConnectionPoint[] AllConnections = FindObjectsOfType<ConnectionPoint>();
+        Transform[] PatrolPoints = new Transform[AllConnections.Length];
+        for(int i = 0; i < AllConnections.Length; i++)
         {
-            PrefabBranch.Push(BuildNextPiece());
-            Counter++;
-            if(m_DebugLogs)
-                Debug.Log("Build room " + Counter.ToString());
+            PatrolPoints[i] = AllConnections[i].transform;
         }
-	}
+
+        Enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach(GameObject Enemy in Enemies)
+        {
+            Enemy.GetComponent<Patrol>().Points = PatrolPoints;
+        }
+    }
 	
 	void Update () {
 	    
 	}
+
+    private void BuildLevel(int aLevelLength)
+    {
+        int AimLength = aLevelLength;
+        bool LevelEnded = false;
+        //bool ConnectionsLeft = true;
+
+        while(RoomBranch.Count > 0)
+        {
+            GameObject NewPrefab;
+            if (RoomBranch.Count >= aLevelLength && !LevelEnded)
+            {
+                NewPrefab = BuildShrinePiece();
+                if (NewPrefab == null)
+                {
+                    NewPrefab = BuildEndPiece();
+                }
+                else
+                {
+                    LevelEnded = true;
+                }
+            }
+            else if(RoomBranch.Count >= AimLength)
+            {
+                NewPrefab = BuildEndPiece();
+            }
+            else
+            {
+                NewPrefab = BuildNextPiece();
+                if(NewPrefab == null)
+                {
+                    NewPrefab = BuildEndPiece();
+                }
+            }
+
+            if(NewPrefab == null)
+            {
+                RoomBranch.Pop();
+            }
+            else
+            {
+                RoomBranch.Push(NewPrefab);
+                LevelObjects.Enqueue(NewPrefab);
+            }
+        }
+
+    }
 
     // Builds the next piece on the current branch, and returns the GameObject. If unsuccessful, returns null.
     private GameObject BuildNextPiece()
@@ -57,13 +161,13 @@ public class LevelDigger : MonoBehaviour {
         //Debug.Log("BuildNextPiece");
         GameObject NextPiece = null;
 
-        ConnectionPoint[] NextConnections = GetConnections(PrefabBranch.Peek());
-        if(NextConnections != null)
+        ConnectionPoint[] NextConnections = GetConnections(RoomBranch.Peek());
+        if (NextConnections != null)
         {
-            
+
             foreach (ConnectionPoint Connection in NextConnections)
             {
-                if(Connection.Linked)
+                if (Connection.Linked)
                 {
                     continue;
                 }
@@ -71,14 +175,12 @@ public class LevelDigger : MonoBehaviour {
 
                 Transform BuildFromTransform = Connection.transform;
 
-                
-
                 NextPiece = TestAndBuildPrefabs(BuildFromTransform, Connection.PreferedPrefabs);
-                if(NextPiece == null)
+                if (NextPiece == null)
                 {
-                    NextPiece = TestAndBuildPrefabs(BuildFromTransform, PrefabArray);
+                    NextPiece = TestAndBuildPrefabs(BuildFromTransform, BranchingRooms);
                 }
-                if(NextPiece != null)
+                if (NextPiece != null)
                 {
                     Connection.Linked = true;
 
@@ -86,12 +188,84 @@ public class LevelDigger : MonoBehaviour {
                     {
                         Debug.Log("Found a piece that worked, built a " + NextPiece.name);
                     }
-                    
+
                     break;
                 }
             }
         }
         return NextPiece;
+    }
+
+    // Builds the last piece on this branch, and returns the GameObject. If there are no Connections left unlinked, returns null.
+    private GameObject BuildEndPiece()
+    {
+        GameObject EndPiece = null;
+
+        ConnectionPoint[] NextConnections = GetConnections(RoomBranch.Peek());
+        if (NextConnections != null)
+        {
+            foreach (ConnectionPoint Connection in NextConnections)
+            {
+                if (Connection.Linked)
+                {
+                    continue;
+                }
+
+                Transform BuildFromTransform = Connection.transform;
+
+                EndPiece = TestAndBuildPrefabs(BuildFromTransform, EndRooms);
+                if (EndPiece == null)
+                {
+                    EndPiece = TestAndBuildPrefabs(BuildFromTransform, EndWalls);
+                }
+                if (EndPiece != null)
+                {
+                    Connection.Linked = true;
+
+                    if (m_DebugLogs)
+                    {
+                        Debug.Log("Found a piece that worked, built a " + EndPiece.name);
+                    }
+
+                    break;
+                }
+            }
+        }
+        return EndPiece;
+    }
+
+    // Builds a shrine on this branch, and returns the GameObject. If there are no Connections left unlinked, returns null.
+    private GameObject BuildShrinePiece()
+    {
+        GameObject ShrinePiece = null;
+
+        ConnectionPoint[] NextConnections = GetConnections(RoomBranch.Peek());
+        if (NextConnections != null)
+        {
+            foreach (ConnectionPoint Connection in NextConnections)
+            {
+                if (Connection.Linked)
+                {
+                    continue;
+                }
+
+                Transform BuildFromTransform = Connection.transform;
+
+                ShrinePiece = TestAndBuildPrefabs(BuildFromTransform, Shrines);
+                if (ShrinePiece != null)
+                {
+                    Connection.Linked = true;
+
+                    if (m_DebugLogs)
+                    {
+                        Debug.Log("Found a piece that worked, built a " + ShrinePiece.name);
+                    }
+
+                    break;
+                }
+            }
+        }
+        return ShrinePiece;
     }
 
     // Returns the ConnectionPoints of a prefab in random order. If no ConnectionPoints exist, returns null.
@@ -121,9 +295,6 @@ public class LevelDigger : MonoBehaviour {
     private GameObject TestAndBuildPrefabs(Transform aFromTransform, GameObject[] aPrefabs)
     {
         GameObject TransformMarker = new GameObject();
-        
-        
-        //Debug.Log("TestAndBuildPrefab");
         GameObject ReturnPrefab = null;
 
         // To "scramble" the list, we add a random integer to the index (andmod it by length).
@@ -145,6 +316,7 @@ public class LevelDigger : MonoBehaviour {
                 bool NoCollisions = true;
                 
                 Quaternion ConnectionRotation = Quaternion.FromToRotation(Connection.transform.forward, -aFromTransform.forward);
+
                 Vector3 ConnectionOffset = ConnectionRotation * Connection.transform.localPosition;
 
                 // Go through all BoxColliders in this prefab.
@@ -206,6 +378,8 @@ public class LevelDigger : MonoBehaviour {
 
                     ReturnPrefab.transform.position = aFromTransform.position - ConnectionOffset;
                     ReturnPrefab.transform.rotation = ConnectionRotation;
+
+                    Debug.Log(TestObject.name + "->" + Connection.name + ".rotation: " + ConnectionRotation.ToString());
 
                     ConnectionPoint[] PrefabConnections = ReturnPrefab.GetComponentsInChildren<ConnectionPoint>();
                     foreach (ConnectionPoint PrefabConnection in PrefabConnections)
