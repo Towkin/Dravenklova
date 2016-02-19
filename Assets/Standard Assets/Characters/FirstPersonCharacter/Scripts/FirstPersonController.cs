@@ -31,7 +31,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public bool PlayerMoving
         {
-            get { return m_MoveDir.magnitude > 0.05f; }
+            get { return m_Input.magnitude > 0.05f; }
         }
 
 

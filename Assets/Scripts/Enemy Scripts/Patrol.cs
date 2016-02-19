@@ -3,23 +3,23 @@ using System.Collections;
 
 public class Patrol : MonoBehaviour
 {
-
-    // Want to make the Enemy follow the target(Player)...
-    [SerializeField]
-    private bool m_Chasing; // Is he chasing the player?
-    [SerializeField]
-    private GameObject m_Target; // The target we want to follow(player)
-    public float m_Distance = 20f;
-
-
-     
-
-
-    [SerializeField]
     private Transform[] m_Points;
-    private int m_DestPoint = 0;
+    public Transform[] Points
+    {
+        get { return m_Points; }
+        set { m_Points = value; }
+    }
+    private int m_DestIndex = 0;
+    public int DestinationIndex
+    {
+        get { return m_DestIndex; }
+        private set { m_DestIndex = value; }
+    }
     private NavMeshAgent m_Agent;
-
+    public NavMeshAgent Agent
+    {
+        get { return m_Agent; }
+    }
 
 
 
@@ -60,18 +60,20 @@ public class Patrol : MonoBehaviour
         
 
 
-        if (m_Points.Length == 0)
+        if (Points == null || Points.Length == 0)
         {
             return;
         }
 
         // Set the agent to go to the currently selected destination.
-        m_Agent.destination = m_Points[m_DestPoint].position;
+        m_Agent.destination = Points[DestinationIndex].position;
 
+        Debug.Log("New destination: " + m_Agent.destination.ToString());
 
         // Choose the next point in the array as the destination,
         // cycling to the start if nessessary.
-        m_DestPoint = (m_DestPoint + 1) % m_Points.Length;
+        DestinationIndex = (DestinationIndex + Random.Range(1, Points.Length-1)) % Points.Length;
+        
 
     }
 
@@ -83,13 +85,7 @@ public class Patrol : MonoBehaviour
 
         // else if
 
-
-        if (Vector3.Distance(m_Target.transform.position, transform.position) <= m_Distance)
-        {
-
-            Debug.Log("wat up");
-
-        }
+        
 
 
         // Move towards the player...
