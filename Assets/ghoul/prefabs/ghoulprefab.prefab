@@ -1761,8 +1761,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160680}
-  m_LocalRotation: {x: 0, y: -0.5668897, z: 0, w: 0.8237937}
-  m_LocalPosition: {x: -14.3, y: 0.49810052, z: -8.24}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_Children:
   - {fileID: 418706}
@@ -2004,6 +2004,12 @@ MonoBehaviour:
   m_ViewDistance: 35
   m_DamageMin: 20
   m_DamageMax: 30
+  m_FootstepEvent: event:/Enemies/Enemy_Footstep
+  m_VoiceIdleEvent: event:/Enemies/Enemy_Breath_Idle
+  m_VoiceAttackEvent: event:/Enemies/Enemy_Breath_Attack
+  m_VoiceDeathEvent: event:/Enemies/Enemy_Breath_Death
+  m_VoiceHitEvent: event:/Enemies/Enemy_Breath_Damage
+  m_AttackTimer: 0
 --- !u!114 &11455796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2198,6 +2204,46 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_ViewDistance
       value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_FootstepEvent
+      value: event:/Enemies/Enemy_Footstep
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_VoiceIdleEvent
+      value: event:/Enemies/Enemy_Breath_Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_VoiceAttackEvent
+      value: event:/Enemies/Enemy_Breath_Attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_VoiceDeathEvent
+      value: event:/Enemies/Enemy_Breath_Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_VoiceHitEvent
+      value: event:/Enemies/Enemy_Breath_Damage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

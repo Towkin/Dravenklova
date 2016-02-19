@@ -81,8 +81,8 @@ public class PlayerChar : MonoBehaviour {
         m_PlayerHolyMod = 15;
         m_PlayerAmmoMax = 3;
         m_PlayerAmmo = 3;
-        m_PlayerHealth = 4;
-        m_PlayerHealthMax = 4;
+        m_PlayerHealth = 100;
+        m_PlayerHealthMax = 100;
         m_PlayerOilMax = 100;
         m_PlayerOil = m_PlayerOilMax;
         m_PlayerSanityMax = 100;

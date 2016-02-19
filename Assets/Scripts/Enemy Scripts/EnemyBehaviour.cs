@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using FMOD.Studio;
 using System.Collections;
 
 public class EnemyBehaviour : MonoBehaviour
@@ -107,6 +108,35 @@ public class EnemyBehaviour : MonoBehaviour
             return m_Navigator;
         }
     }
+    private Animator m_Animations;
+    public Animator Animations
+    {
+        get { return m_Animations; }
+    }
+    private float m_FootstepTimer = 0f;
+    public float FootstepTimer
+    {
+        get { return m_FootstepTimer; }
+        set { m_FootstepTimer = value; }
+    }
+
+    [SerializeField] [FMODUnity.EventRef]
+    private string m_FootstepEvent;
+    private EventInstance m_FootstepState;
+    [SerializeField] [FMODUnity.EventRef]
+    private string m_VoiceIdleEvent;
+    private EventInstance m_VoiceIdle;
+    [SerializeField] [FMODUnity.EventRef]
+    private string m_VoiceAttackEvent;
+    private EventInstance m_VoiceAttack;
+    [SerializeField] [FMODUnity.EventRef]
+    private string m_VoiceDeathEvent;
+    private EventInstance m_VoiceDeath;
+    [SerializeField] [FMODUnity.EventRef]
+    private string m_VoiceHitEvent;
+    private EventInstance m_VoiceHit;
+
+
     private float m_Health = 1f;
     private float m_MaxHealth = 1f;
     public float Health
@@ -123,7 +153,7 @@ public class EnemyBehaviour : MonoBehaviour
         }
     }
 
-
+    [SerializeField]
     private float m_AttackTimer = 0f;
     private float AttackTimer
     {
@@ -136,25 +166,29 @@ public class EnemyBehaviour : MonoBehaviour
         get { return m_AttackTimerMax; }
     }
 
-    private bool m_CanAttack = true;
+    //private bool m_CanAttack = true;
     public bool CanAttack
     {
         get
         {
-            if (!m_CanAttack)
-            {
-                m_CanAttack = (AttackTimer = Mathf.Max(AttackTimer - Time.deltaTime, 0f)) <= 0f;
-            }
-            return m_CanAttack;
+            return AttackTimer <= 0f;
         }
-        private set { m_CanAttack = value; }
     }
 
     private bool m_IsAttacking = false;
     public bool IsAttacking
     {
         get { return m_IsAttacking; }
-        private set { m_IsAttacking = value; }
+        private set
+        {
+            m_IsAttacking = value;
+            if (m_IsAttacking)
+            {
+                m_AttackTimer = m_AttackTimerMax;
+                m_VoiceAttack.setTimelinePosition(0);
+                m_VoiceAttack.start();
+            }
+        }
     }
     private bool m_IsDead = false;
     public bool IsDead
@@ -166,6 +200,8 @@ public class EnemyBehaviour : MonoBehaviour
             if (m_IsDead)
             {
                 m_Navigator.speed = 0.0f;
+                m_VoiceDeath.setTimelinePosition(0);
+                m_VoiceDeath.start();
             }
         }
     }
@@ -173,7 +209,14 @@ public class EnemyBehaviour : MonoBehaviour
     public bool WasHit
     {
         get { return m_WasHit; }
-        private set { m_WasHit = value; }
+        private set {
+            m_WasHit = value;
+            if (m_WasHit)
+            {
+                m_VoiceHit.setTimelinePosition(0);
+                m_VoiceHit.start();
+            }
+        }
     }
     private bool m_SeePlayer = false;
     public bool SeePlayer
@@ -192,7 +235,14 @@ public class EnemyBehaviour : MonoBehaviour
     public bool BeginHunt
     {
         get { return m_BeginHunt; }
-        private set { m_BeginHunt = value; }
+        private set {
+            m_BeginHunt = value;
+            if(m_BeginHunt)
+            {
+                m_VoiceIdle.setTimelinePosition(0);
+                m_VoiceIdle.start();
+            }
+        }
     }
 
     //private float Timer = 2f;
@@ -202,8 +252,14 @@ public class EnemyBehaviour : MonoBehaviour
         m_Navigator = GetComponent<NavMeshAgent>();
         m_Player = GameObject.FindGameObjectWithTag("Player");
         m_PlayerInfo = Player.GetComponent<PlayerChar>();
-        //m_Animations = GetComponent<Animator>();
-	}
+        m_Animations = GetComponent<Animator>();
+
+        m_FootstepState = FMODUnity.RuntimeManager.CreateInstance(m_FootstepEvent);
+        m_VoiceAttack = FMODUnity.RuntimeManager.CreateInstance(m_VoiceAttackEvent);
+        m_VoiceDeath = FMODUnity.RuntimeManager.CreateInstance(m_VoiceDeathEvent);
+        m_VoiceHit = FMODUnity.RuntimeManager.CreateInstance(m_VoiceHitEvent);
+        m_VoiceIdle = FMODUnity.RuntimeManager.CreateInstance(m_VoiceIdleEvent);
+    }
 	
 	
 	void Update ()
@@ -214,6 +270,17 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (!IsDead)
         {
+            FootstepTimer -= Time.deltaTime;
+            if(FootstepTimer <= 0)
+            {
+                var CurrentAnimationState = Animations.GetCurrentAnimatorStateInfo(0);
+                float FootstepMaxTime = CurrentAnimationState.length / 2;
+                FootstepTimer = FootstepMaxTime;
+                m_FootstepState.setTimelinePosition(0);
+                m_FootstepState.start();
+            }
+
+            AttackTimer -= Time.deltaTime;
             if(SeePlayer = FindPlayer())
             {
                 if(!Hunting)
@@ -236,6 +303,7 @@ public class EnemyBehaviour : MonoBehaviour
                 {
                     IsAttacking = true;
                     PlayerInfo.PlayerHealth -= Damage;
+                    Debug.Log("Player health: " + PlayerInfo.PlayerHealth.ToString());
                 }
 
                 if(!SeePlayer && Navigator.remainingDistance < 1f)
@@ -249,6 +317,21 @@ public class EnemyBehaviour : MonoBehaviour
                 Navigator.angularSpeed = WalkRotSpeed;
                 Navigator.acceleration = WalkAcceleration;
             }
+
+            FMOD.ATTRIBUTES_3D Attributes3D = new FMOD.ATTRIBUTES_3D();
+            Attributes3D.position.x = transform.position.x;
+            Attributes3D.position.y = transform.position.y;
+            Attributes3D.position.z = transform.position.z;
+
+            Attributes3D.forward.x = transform.forward.x;
+            Attributes3D.forward.y = transform.forward.y;
+            Attributes3D.forward.z = transform.forward.z;
+
+            m_FootstepState.set3DAttributes(Attributes3D);
+            m_VoiceAttack.set3DAttributes(Attributes3D);
+            m_VoiceDeath.set3DAttributes(Attributes3D);
+            m_VoiceHit.set3DAttributes(Attributes3D);
+            m_VoiceIdle.set3DAttributes(Attributes3D);
         }
     }
 

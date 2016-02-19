@@ -61,7 +61,7 @@ public class RandomTemplate : MonoBehaviour
 
 
         // Create an instance of a randomly selected GameObject template in the list.
-        GameObject SpawnedObject = Instantiate(TemplateList[Random.Range(0, TemplateList.Length)]);
+        GameObject SpawnedObject = Instantiate<GameObject>(TemplateList[Random.Range(0, TemplateList.Length)]);
 
         // Add the transform attributes from this GameObject.
         CopyTransform(SpawnedObject.transform, this.transform);
@@ -71,10 +71,21 @@ public class RandomTemplate : MonoBehaviour
 
     protected void CopyTransform(Transform aTarget, Transform aSource)
     {
+        NavMeshAgent Agent = aTarget.GetComponent<NavMeshAgent>();
+        if (Agent != null)
+        {
+            Agent.enabled = false;
+        }
+
         aTarget.parent = aSource.parent;
         //aTarget.localPosition += aSource.localPosition;
         aTarget.position = aSource.position;
         aTarget.localEulerAngles += aSource.localEulerAngles;
         aTarget.localScale = Vector3.Scale(aTarget.localScale, aSource.localScale);
+
+        if (Agent != null)
+        {
+            Agent.enabled = true;
+        }
     }
 }
