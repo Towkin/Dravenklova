@@ -26,11 +26,16 @@ public class PlayerCrossbow : MonoBehaviour {
     [SerializeField]private bool m_Loaded;
     [SerializeField]private bool m_IsLoading;
 
+    private Quaternion ReadyRotation;
+    private Quaternion ReloadRotation;
+
+
     [FMODUnity.EventRef]
     [SerializeField]
     private string m_CrossbowShotAudio;
     private EventInstance m_CrossbowShotEvent;
     private CueInstance m_CrossbowCue;
+    private ParameterInstance m_CrossbowReload;
 
     private PlayerChar m_PlayerChar;
     
@@ -41,7 +46,11 @@ public class PlayerCrossbow : MonoBehaviour {
         m_IsLoading = false;
         m_CrossbowShotEvent = FMODUnity.RuntimeManager.CreateInstance(m_CrossbowShotAudio);
         m_CrossbowShotEvent.start();
-        m_CrossbowShotEvent.getCue("A", out m_CrossbowCue);
+        m_CrossbowShotEvent.getCue("KeyOff", out m_CrossbowCue);
+        m_CrossbowShotEvent.getParameter("Reload", out m_CrossbowReload);
+
+        ReadyRotation = Crossbow.transform.localRotation;
+        ReloadRotation = ReadyRotation * Quaternion.AngleAxis(-20f, Vector3.right);
     }
     void OnDestroy()
     {
@@ -72,12 +81,15 @@ public class PlayerCrossbow : MonoBehaviour {
                 BoltShot.transform.up = m_Cam.transform.forward;
                 m_Loaded = false;
                 m_CrossbowCue.trigger();
-                m_CrossbowCue.trigger();
             }
             else if (m_PlayerChar.PlayerAmmo > 0)
             {
                 //reload. insert any code regarding meshes and animations, I've done my part! 
+                Crossbow.transform.localRotation = ReloadRotation;
                 m_IsLoading = true;
+
+                m_CrossbowReload.setValue(1f);
+                m_CrossbowCue.trigger();
             }
             else
             {
@@ -97,7 +109,8 @@ public class PlayerCrossbow : MonoBehaviour {
                 m_Loaded = true;
                 m_PlayerReloadCount = 0;
                 m_PlayerChar.PlayerAmmo -= 1;
-                m_CrossbowShotEvent.start();
+                Crossbow.transform.localRotation = ReadyRotation;
+                
             }
         }
 
@@ -105,6 +118,9 @@ public class PlayerCrossbow : MonoBehaviour {
         {
             m_PlayerReloadCount = 0;
             m_IsLoading = false;
+            m_CrossbowReload.setValue(0f);
+            Crossbow.transform.localRotation = ReadyRotation;
         }
+        
     }
 }

@@ -74,7 +74,7 @@ public class LevelDigger : MonoBehaviour {
         RoomBranch.Push(FirstRoom);
         LevelObjects.Enqueue(FirstRoom);
 
-        BuildLevel(4);
+        BuildLevel(5);
 
         NavMeshBuilder.BuildNavMesh();
 
