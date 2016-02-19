@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEditor;
 using System.Collections;
 
 public class PlayerChar : MonoBehaviour {
@@ -109,6 +110,7 @@ public class PlayerChar : MonoBehaviour {
         if (m_PlayerHealth <= 0)
         {
             //TODO: this does death
+            EditorApplication.isPlaying = false;
         }
     }
 }
